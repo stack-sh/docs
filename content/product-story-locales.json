@@ -1,0 +1,71 @@
+{
+  "ja": {
+    "hero": {
+      "tagline": "構成を書くだけで、美しい図に。",
+      "description": "サービスとつながりをテキストで記述。Stackが配置とテーマを整え、ターミナルでもブラウザでも共有できるSVGを生成します。",
+      "primaryActionText": "最初の図を作る",
+      "secondaryActionText": "Playgroundで試す",
+      "logoAlt": "Stackロゴ"
+    },
+    "features": {
+      "beautiful-by-default": {
+        "title": "書くだけで、見た目が整う",
+        "details": "箱の位置や色ではなく、システムの構成に集中。自動配置と統一されたテーマで、手作業で整えなくても見やすい図になります。"
+      },
+      "consistent-everywhere": {
+        "title": "どこで作っても、一貫した図に",
+        "details": "Coding agent、ターミナル、ブラウザを行き来しても大丈夫。共通のエンジンが、同じソース・テーマ・アイコンパックから一貫した図を生成します。"
+      },
+      "fast-local-rendering": {
+        "title": "手元で、すばやく描画",
+        "details": "描画サーバーを介さず、書いて、描いて、すぐ見直す。ソースは手元に置いたまま、スクリプトや外部アセットを含まないSVGを書き出せます。"
+      }
+    }
+  },
+  "zh": {
+    "hero": {
+      "tagline": "写下技术架构，得到精美图表。",
+      "description": "用文本描述服务及其连接。Stack负责布局和主题，在终端或浏览器中生成可分享的SVG。",
+      "primaryActionText": "创建第一张图",
+      "secondaryActionText": "试用Playground",
+      "logoAlt": "Stack标志"
+    },
+    "features": {
+      "beautiful-by-default": {
+        "title": "无需手动美化",
+        "details": "专注描述系统，不必逐个调整方框。自动布局和协调的主题让图表保持清晰美观，无需手动定位或设置样式。"
+      },
+      "consistent-everywhere": {
+        "title": "不同工具，一致呈现",
+        "details": "在编程智能体、终端和浏览器之间自由切换。共享引擎让相同源文件、主题和图标包在不同工作流程中保持一致。"
+      },
+      "fast-local-rendering": {
+        "title": "本地快速渲染",
+        "details": "无需渲染服务器，修改后即可再次生成。源文件留在你的设备上，并可导出不含脚本或外部资源的独立SVG。"
+      }
+    }
+  },
+  "ko": {
+    "hero": {
+      "tagline": "구성을 쓰면, 아름다운 다이어그램으로.",
+      "description": "서비스와 연결을 텍스트로 설명하세요. Stack이 배치와 테마를 정리하고, 터미널이나 브라우저에서 공유할 수 있는 SVG를 만듭니다.",
+      "primaryActionText": "첫 다이어그램 만들기",
+      "secondaryActionText": "Playground에서 체험하기",
+      "logoAlt": "Stack 로고"
+    },
+    "features": {
+      "beautiful-by-default": {
+        "title": "직접 꾸미지 않아도 아름답게",
+        "details": "박스 하나하나가 아닌 시스템을 설명하세요. 자동 배치와 조화로운 테마로 위치와 스타일을 수작업으로 조정하지 않아도 정돈된 다이어그램을 만듭니다."
+      },
+      "consistent-everywhere": {
+        "title": "어디서나 일관된 결과",
+        "details": "코딩 에이전트, 터미널, 브라우저를 자유롭게 오가세요. 공유 엔진이 같은 소스, 테마, 아이콘 팩을 다양한 작업 환경에서 일관되게 렌더링합니다."
+      },
+      "fast-local-rendering": {
+        "title": "내 기기에서 빠르게 렌더링",
+        "details": "렌더링 서버 없이 수정하고, 그리고, 다시 확인하세요. 소스를 내 기기에 둔 채 스크립트나 외부 에셋이 없는 독립형 SVG로 내보낼 수 있습니다."
+      }
+    }
+  }
+}

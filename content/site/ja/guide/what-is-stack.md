@@ -31,12 +31,9 @@ diagram "Service architecture" {
 
 ## Stackが重視すること
 
-- **簡潔なauthoring:** 名前付きnodeとedgeだけで有用なdiagramを書けます。
-- **予測可能な生成:** 人とlanguage modelが同じconceptを安定して記述できます。
-- **Semantic source:** Pixelではなくtopologyとintentを記録します。
-- **整ったoutput:** 一貫したvisual systemをrendererが所有します。
-- **修正可能なerror:** Diagnosticはsource range、expected value、help、related declarationを示せます。
-- **安全な埋め込み:** Sourceはcode実行、任意asset取得、HTML/SVG注入ができません。
+{{productBenefits}}
+
+一貫した結果には、同じエンジンのバージョン・ソース・テーマ・アイコンパックが必要です。描画は手元で行いますが、ツールの導入、サイトの読み込み、明示的なプロバイダーアイコンの取り込みにはネットワークを使う場合があります。詳しい境界は[バージョニングと安全性](../reference/versioning-and-safety)を参照してください。
 
 ## Stackではないもの
 

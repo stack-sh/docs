@@ -4,6 +4,7 @@ import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { generateMachineResources } from './machine-resources.mjs';
+import { productCopy, productTokens } from './product-story.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 
@@ -50,10 +51,15 @@ export async function generate(directory = root, check = false) {
   const siteFiles = await filePaths(siteRoot);
   if (siteFiles.length > 0) {
     const prompt = (await readFile(path.join(directory, 'content/agent-prompt.txt'), 'utf8')).trimEnd();
+    const story = JSON.parse(await readFile(path.join(directory, 'content/product-story.json'), 'utf8'));
+    const translations = JSON.parse(await readFile(path.join(directory, 'content/product-story-locales.json'), 'utf8'));
     for (const file of siteFiles) {
       assert.ok(file.endsWith('.md'), `Only Markdown source is supported: ${file}`);
       const source = await readFile(path.join(siteRoot, file), 'utf8');
-      const rendered = source.replaceAll('{{cliVersion}}', release.version).replaceAll('{{agentPrompt}}', prompt);
+      const locale = file.match(/^(ja|zh|ko)\//)?.[1] ?? 'en';
+      const tokens = { cliVersion: release.version, agentPrompt: prompt, ...productTokens(productCopy(story, translations, locale)) };
+      let rendered = source;
+      for (const [key, value] of Object.entries(tokens)) rendered = rendered.replaceAll(`{{${key}}}`, value);
       assert.ok(!/\{\{[^}]+\}\}/.test(rendered), `Unknown site template token: ${file}`);
       outputs[`site/${file}`] = rendered;
     }

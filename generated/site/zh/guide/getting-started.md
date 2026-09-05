@@ -124,7 +124,7 @@ $ stack fmt --check diagram.stack
 
 ## 编写第一份文档
 
-将编辑器内容替换为下面的示例：
+在浏览器中试用时，打开[Playground](https://stack-diagram.com/)，将编辑器内容替换为下面的示例。CLI用户可以将相同源文件保存为`diagram.stack`，然后再次执行上面的检查与渲染命令：
 
 ```stack
 stack 1.0
@@ -196,10 +196,10 @@ diagram "Checkout" {
 
 ## 接下来阅读
 
-- [文档与语法](../language/syntax)介绍词法规则和完整语法。
-- [节点与分组](../language/nodes-and-groups)介绍组件和边界建模。
-- [连线与布局](../language/edges-and-layout)介绍关系和布局意图。
-- 选择视觉系统或显式图标前，请阅读[主题与图标](../language/themes-and-icons)。
+- **与编程智能体协作：** 安装可选的[Stack技能](./coding-agents)，使用共享的检查与渲染流程。
+- **从示例开始：** 在Playground中打开[实时渲染的示例](../examples/)，再尝试[主题与图标](../language/themes-and-icons)。
+- **适配你的环境：** [导入供应商图标](./provider-icons)，然后通过[CLI配置指南](https://github.com/stack-sh/cli/blob/main/docs/configuration.md)选择本地存储位置。这些配置属于CLI；浏览器需要显式导入本地图标包。
+- **查阅细节：** 描述更大的系统时，参考[语言文档](../language/syntax)和[诊断与限制](../reference/diagnostics-and-limits)。
 
 ## 更新或卸载
 

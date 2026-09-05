@@ -24,7 +24,7 @@
     },
     {
       "path": "site/guide/getting-started.md",
-      "sha256": "b9e21a3fcf5c8de6360dcf060cbf2b05099f0e55dda1186f1ea3700740e0a860"
+      "sha256": "e673678a7fe76d608f290babaf073c57b98fd03fce166c732d86feb50e4c5d8f"
     },
     {
       "path": "site/guide/playground.md",
@@ -36,11 +36,11 @@
     },
     {
       "path": "site/guide/what-is-stack.md",
-      "sha256": "ab46e1a9652452dbdb9502726451ae42c926036bb3faa3639605e562d994d1e2"
+      "sha256": "b02d56c6f26c656f27ee4e90ba36edbe74268eaa1d878137c3ade8ee7a76222f"
     },
     {
       "path": "site/index.md",
-      "sha256": "2c7a4c60b27975c811efd7a6323d16791b16e8b713bfd2eac03d4f14dfdf4e70"
+      "sha256": "354a80ed32a22a7afd0817ad323a601b0cde58c5f6d9c488bac6cd3b1ef5685c"
     },
     {
       "path": "site/ja/examples/index.md",
@@ -52,7 +52,7 @@
     },
     {
       "path": "site/ja/guide/getting-started.md",
-      "sha256": "bae22b095cc22279e48494213748d1b0413eddec9893b261c73159267c27875d"
+      "sha256": "729e59c32a554f6efa6559e6e57811fb494813e8bd68b3e919b90dac7e16bbd6"
     },
     {
       "path": "site/ja/guide/playground.md",
@@ -64,11 +64,11 @@
     },
     {
       "path": "site/ja/guide/what-is-stack.md",
-      "sha256": "1206d992d898f626d7505ae64d494513175bb53766845006a5921e7d32e44b25"
+      "sha256": "0832ffffadd5db80ab613f96cd2e88bb76cec54722ef5b430119e97642f083d5"
     },
     {
       "path": "site/ja/index.md",
-      "sha256": "0e24d302a65bcaa7cfcc7793c6d059449514ddedfff2e14dbc07ff993dfe147c"
+      "sha256": "cc3f5cffe10077e4fa94b7a34a43bb4627d9d4e7340d9741563ffb868206923e"
     },
     {
       "path": "site/ja/language/edges-and-layout.md",
@@ -108,7 +108,7 @@
     },
     {
       "path": "site/ko/guide/getting-started.md",
-      "sha256": "0e55e18cc77bfa6ffb2598ecfc69b1884a8e0380e54953860cbfa1e01ebcd58b"
+      "sha256": "667080b1012bc67514abe3827d9ff166e7c50dfd0fc7ac3be36d2ef73b801540"
     },
     {
       "path": "site/ko/guide/playground.md",
@@ -120,11 +120,11 @@
     },
     {
       "path": "site/ko/guide/what-is-stack.md",
-      "sha256": "cc1e807ac44f57af084a6b87bdccb3ecb5484462ebd5852be3b97692d66d3f86"
+      "sha256": "4557a1ee3fc7f1a73e26d8da38299c50cb563f1f492ae421f68c63ff0198a029"
     },
     {
       "path": "site/ko/index.md",
-      "sha256": "1d625195c05e182786ecec258e4ca994429bf6f39ea3068b4429befe3cf2211d"
+      "sha256": "973f42eaa34720743f80eef15af3ed684e2c9c8bf7ecd84bbaad084bca166564"
     },
     {
       "path": "site/ko/language/edges-and-layout.md",
@@ -192,7 +192,7 @@
     },
     {
       "path": "site/zh/guide/getting-started.md",
-      "sha256": "88100e9090603b3eb07fad7e7b32f066cede0cfcc306e28ecb4ed852b9a850e1"
+      "sha256": "2347ab5ddc5196f30287726eac5294b07b81d2c9cf543335751dd62dcc8e1613"
     },
     {
       "path": "site/zh/guide/playground.md",
@@ -204,11 +204,11 @@
     },
     {
       "path": "site/zh/guide/what-is-stack.md",
-      "sha256": "d616fb3b5b2324c9892a3f593f0e3b2f92d0fb338300ba2ebf3488022aa9634b"
+      "sha256": "763078612cb5b7e6c9871081a7baec2b6b1c26845af6c72ea3fd153f9c38801f"
     },
     {
       "path": "site/zh/index.md",
-      "sha256": "432a5667dd51c297e2a415f3fca9438d8cfd7ed4b02d8946fc863548363f228d"
+      "sha256": "0a7bd5635557f0924ff3098513deb4bcec8bd0006c87a9a80e49ebf6acc15fba"
     },
     {
       "path": "site/zh/language/edges-and-layout.md",

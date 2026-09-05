@@ -31,12 +31,11 @@ The document says that a client calls a service. It does not say where either bo
 
 ## What Stack optimizes for
 
-- **Concise authoring:** useful diagrams need little more than named nodes and edges.
-- **Predictable generation:** each concept has one constrained representation that people and language models can produce reliably.
-- **Semantic source:** a document records topology and intent, not pixels.
-- **Polished output:** the renderer owns a coherent visual system.
-- **Actionable errors:** diagnostics point to source ranges and can include expected values, corrective help, and related declarations.
-- **Safe embedding:** source cannot execute code, fetch arbitrary assets, or inject HTML or SVG.
+- **Beautiful by default:** Describe the system, not every box. Automatic layout and coordinated themes keep your diagrams polished without manual positioning or styling.
+- **Consistent everywhere:** Move between your coding agent, terminal, and browser. The shared engine keeps the same source, theme, and icon packs consistent across workflows.
+- **Fast, local rendering:** Edit, render, and repeat without a rendering server. Keep your source on your device and export standalone SVG without scripts or external assets.
+
+Consistency assumes matching engine versions and the same source, theme, and icon packs. Rendering stays local; installing tools, loading the website, and explicitly importing provider icons can require network access. See [versioning and safety](../reference/versioning-and-safety) for the exact boundaries.
 
 ## What Stack is not
 
