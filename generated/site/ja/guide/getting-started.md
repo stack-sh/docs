@@ -24,7 +24,7 @@ cargo install stack-diagram-cli --version 0.5.1 --locked
 
 ### Aqua
 
-Gitリポジトリ内に、次の内容を`aqua.yaml`として保存します。
+Gitリポジトリのルート（`.git`があるディレクトリ）に、次の内容を`aqua.yaml`として保存します。新しいプロジェクトでは先に`git init`を実行してください。
 
 ```yaml
 checksum:
@@ -104,7 +104,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 ## 最初のSVGを作る
 
-新しい空の作業ディレクトリで実行します。
+新しい空の作業ディレクトリで実行します。Aquaを使う場合は、`aqua.yaml`があるGitリポジトリの内側に作ってください。
 
 ```sh
 $ stack --version

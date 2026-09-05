@@ -24,7 +24,7 @@ cargo install stack-diagram-cli --version {{cliVersion}} --locked
 
 ### Aqua
 
-在Git仓库中，将以下内容保存为`aqua.yaml`：
+在Git仓库的根目录（包含`.git`的目录）中，将以下内容保存为`aqua.yaml`。新项目请先运行`git init`：
 
 ```yaml
 checksum:
@@ -104,7 +104,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 ## 生成第一个SVG
 
-在新的空工作目录中执行：
+在新的空工作目录中执行。使用Aqua时，请将该目录放在包含`aqua.yaml`的Git仓库内：
 
 ```sh
 $ stack --version

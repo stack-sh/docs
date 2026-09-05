@@ -24,7 +24,7 @@ cargo install stack-diagram-cli --version 0.5.1 --locked
 
 ### Aqua
 
-In a Git repository, save the following as `aqua.yaml`:
+At the root of a Git repository (the directory containing `.git`), save the following as `aqua.yaml`. If this is a new project, run `git init` first:
 
 ```yaml
 checksum:
@@ -104,7 +104,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 ## Create your first SVG
 
-In a new empty working directory, run:
+In a new empty working directory, run the following. With Aqua, keep this directory inside the Git repository containing your `aqua.yaml`:
 
 ```sh
 $ stack --version
