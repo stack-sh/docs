@@ -13,6 +13,246 @@
     {
       "path": "guide/agent-workflow.md",
       "sha256": "66fe4c3c97afad3a740d9ab824c5aae3f43783bfa251fe0347666b38bc3afc9b"
+    },
+    {
+      "path": "site/examples/index.md",
+      "sha256": "458d6c20c38e7575a106674cae869aed2ec8470aaa51f0a4625afc59017cf50f"
+    },
+    {
+      "path": "site/guide/coding-agents.md",
+      "sha256": "2226574cfe247957177a4982e4a21d603ae39e0510e3e24f7a20e3c03566fb92"
+    },
+    {
+      "path": "site/guide/getting-started.md",
+      "sha256": "ab944f4c19c0a1783fe0c9217cb4ff84ead7b3a07d3b8d101b25246d5ef1df87"
+    },
+    {
+      "path": "site/guide/playground.md",
+      "sha256": "5fd132342001a05200efd974517cf2ac03d89fdbb012937fad91f7b68a3a24ea"
+    },
+    {
+      "path": "site/guide/provider-icons.md",
+      "sha256": "6532eb3d53e169eb71065cbb9bdb3f7fbdea2054fa624f7cd6e51986408cb071"
+    },
+    {
+      "path": "site/guide/what-is-stack.md",
+      "sha256": "ab46e1a9652452dbdb9502726451ae42c926036bb3faa3639605e562d994d1e2"
+    },
+    {
+      "path": "site/index.md",
+      "sha256": "2c7a4c60b27975c811efd7a6323d16791b16e8b713bfd2eac03d4f14dfdf4e70"
+    },
+    {
+      "path": "site/ja/examples/index.md",
+      "sha256": "56b4ca1171feaa383b4b9af622d8a899e19d02b26aa1c6011682d81d67f7647a"
+    },
+    {
+      "path": "site/ja/guide/coding-agents.md",
+      "sha256": "eb33ee71336e235cd71c38128c33ef5f68bf9941fe897a1a49683bfe982fc9a0"
+    },
+    {
+      "path": "site/ja/guide/getting-started.md",
+      "sha256": "85b80a8c3a45c97de43cdc2fb73cfa608fbac48f34b1a8eff67c1676084e386c"
+    },
+    {
+      "path": "site/ja/guide/playground.md",
+      "sha256": "aae455a12a660766102bc5f173f52516cf25e979734f36d7683a62cbcde9355c"
+    },
+    {
+      "path": "site/ja/guide/provider-icons.md",
+      "sha256": "74cc764285ff32bef5ee3c90ac4742ecab0558f53346ddfe1286db675d61f7e9"
+    },
+    {
+      "path": "site/ja/guide/what-is-stack.md",
+      "sha256": "1206d992d898f626d7505ae64d494513175bb53766845006a5921e7d32e44b25"
+    },
+    {
+      "path": "site/ja/index.md",
+      "sha256": "0e24d302a65bcaa7cfcc7793c6d059449514ddedfff2e14dbc07ff993dfe147c"
+    },
+    {
+      "path": "site/ja/language/edges-and-layout.md",
+      "sha256": "a3255e9c623e7c46add20ea2d7e42f578d00d474107c327f6198932231596887"
+    },
+    {
+      "path": "site/ja/language/formatting.md",
+      "sha256": "75043f8afbd81c629171e6aa2b4a16c12823bbc3d150bcc6a99b147d90da8a1a"
+    },
+    {
+      "path": "site/ja/language/nodes-and-groups.md",
+      "sha256": "e953db6f6cd06d4ee645e2a83583f2d0b2eec92ea09bc1390edcf994d52b514c"
+    },
+    {
+      "path": "site/ja/language/syntax.md",
+      "sha256": "542935d48c245856a3852fa05c3e6c5ebe53e88d3cddf7216e89e3ea3a681a07"
+    },
+    {
+      "path": "site/ja/language/themes-and-icons.md",
+      "sha256": "5a8db9a572b0b5231ea1620fb23107e6ac04a1f61dfcf25402d9e80944d3c23d"
+    },
+    {
+      "path": "site/ja/reference/diagnostics-and-limits.md",
+      "sha256": "8c012f3f7f6e6b59a42e431eb7ab84004d37075f05f59b0b745551bc093d542a"
+    },
+    {
+      "path": "site/ja/reference/versioning-and-safety.md",
+      "sha256": "f22d30a71ecd2578f46034a055c85e78cc37b979d73a2170f84fb9d66c8672c5"
+    },
+    {
+      "path": "site/ko/examples/index.md",
+      "sha256": "fcc69e690339ab7a89c8dd2a67f9525cddae6a1c5b867068db13a5814d105de0"
+    },
+    {
+      "path": "site/ko/guide/coding-agents.md",
+      "sha256": "a2aace3cfffa01d8a0a240c8a8bac0924f0f82b4aecedcbc5cd7cd53a275dfaa"
+    },
+    {
+      "path": "site/ko/guide/getting-started.md",
+      "sha256": "eb2d4acc5d12b28433a6eadfcee159a8baf9615fce3a4b66aff4c36760716d16"
+    },
+    {
+      "path": "site/ko/guide/playground.md",
+      "sha256": "003841867074cc84012801d8fec299dd0a15d48b62592140c0639dffaf86085d"
+    },
+    {
+      "path": "site/ko/guide/provider-icons.md",
+      "sha256": "d8138ac74047ad8e07034d5b24739a2032b2042db002f9eb7c8f37aa54305724"
+    },
+    {
+      "path": "site/ko/guide/what-is-stack.md",
+      "sha256": "cc1e807ac44f57af084a6b87bdccb3ecb5484462ebd5852be3b97692d66d3f86"
+    },
+    {
+      "path": "site/ko/index.md",
+      "sha256": "1d625195c05e182786ecec258e4ca994429bf6f39ea3068b4429befe3cf2211d"
+    },
+    {
+      "path": "site/ko/language/edges-and-layout.md",
+      "sha256": "8326194eaf41087a5fe8ddfc030047593137e440d2eeb6dd3791dce533ffbf41"
+    },
+    {
+      "path": "site/ko/language/formatting.md",
+      "sha256": "4145f94b2d3dbc0963854d63660caf98725ff94d75e929f9d3eb814350b27bfd"
+    },
+    {
+      "path": "site/ko/language/nodes-and-groups.md",
+      "sha256": "bba8f1c8f9ac9897c6cf39f8bf21ce618335824d2d3c0b2bd3179765dbfcd7b3"
+    },
+    {
+      "path": "site/ko/language/syntax.md",
+      "sha256": "2df6f67fabcc053b4a75523773e6b30a3b7d62e14a6f270b0bd3ed485595b43c"
+    },
+    {
+      "path": "site/ko/language/themes-and-icons.md",
+      "sha256": "fb1eade6dd1b446bdcfa9ccfacbec2d6c702288ae254de939b79938536efb34a"
+    },
+    {
+      "path": "site/ko/reference/diagnostics-and-limits.md",
+      "sha256": "3e9163f520458530736fd966757856e34a6ea5030c52d36839a913578d5a2bb4"
+    },
+    {
+      "path": "site/ko/reference/versioning-and-safety.md",
+      "sha256": "c228e76cdabfb07d816ffcc1576a5f3467f4deec3b809de7269d329a0f0b12be"
+    },
+    {
+      "path": "site/language/edges-and-layout.md",
+      "sha256": "aed8e44169d201ff06dd1e02d93436122bd3aefea167c6b68ce6e7139b06923b"
+    },
+    {
+      "path": "site/language/formatting.md",
+      "sha256": "67bc69d97950cdc2863bde05b7c62c5b71f9bf3173fac5afff0d27b66de0a1a8"
+    },
+    {
+      "path": "site/language/nodes-and-groups.md",
+      "sha256": "be3819622ac9c561ac4a5bb947c7025607ec2d5609a4e62a9e9d35805d3d416f"
+    },
+    {
+      "path": "site/language/syntax.md",
+      "sha256": "f7d67c31b9d50e6d78f1fc30efbd129bbc4f64c887b8a8560b1e15aca30af5ce"
+    },
+    {
+      "path": "site/language/themes-and-icons.md",
+      "sha256": "e82a930f3cb06ed9aa1f95fa160b5f6f8a51fca86ac2e52a1e53b75d2a0e2ff5"
+    },
+    {
+      "path": "site/reference/diagnostics-and-limits.md",
+      "sha256": "dbb1b05d6f4f51c10cddd646ad659e980621e314623403f6817b8a6ab62283b3"
+    },
+    {
+      "path": "site/reference/versioning-and-safety.md",
+      "sha256": "96bd742eda96f9239200b1d94552b1d4aaa88b84d8cc4690b274adcca45d3206"
+    },
+    {
+      "path": "site/zh/examples/index.md",
+      "sha256": "de0575c5ffe6d1f525023f4eea20293fd9e6332fdfeb8973ace1673b23d6a535"
+    },
+    {
+      "path": "site/zh/guide/coding-agents.md",
+      "sha256": "da296f81e02d4ea29dffa4646df375e260d22a650367ec96c095fe90f1cb4fa5"
+    },
+    {
+      "path": "site/zh/guide/getting-started.md",
+      "sha256": "4303edc7deb5fa61d783330d2bfafdcf4fb2a76a5cf51e7da469de2cb8170c6f"
+    },
+    {
+      "path": "site/zh/guide/playground.md",
+      "sha256": "961a408323fb2c0d1434d5b2c5ffa74ed639c187bbb746f031fa6be86ad4d167"
+    },
+    {
+      "path": "site/zh/guide/provider-icons.md",
+      "sha256": "56764fc99f06127f30f6dfa07319614bb48f8763b029571f94fe7614647aa7c6"
+    },
+    {
+      "path": "site/zh/guide/what-is-stack.md",
+      "sha256": "d616fb3b5b2324c9892a3f593f0e3b2f92d0fb338300ba2ebf3488022aa9634b"
+    },
+    {
+      "path": "site/zh/index.md",
+      "sha256": "432a5667dd51c297e2a415f3fca9438d8cfd7ed4b02d8946fc863548363f228d"
+    },
+    {
+      "path": "site/zh/language/edges-and-layout.md",
+      "sha256": "310eed43178e98b6fb663cb02f96234a3729e0e2597cf2098b5c3f97261db8ed"
+    },
+    {
+      "path": "site/zh/language/formatting.md",
+      "sha256": "1f782a7b5fb6101ca240c1e756006d456cc079616362dc4bb3f2e5256a879f73"
+    },
+    {
+      "path": "site/zh/language/nodes-and-groups.md",
+      "sha256": "48a1a9186b2f817be780a01015b6bcae0e3f0b47675546dc36d4c172b40bc3b9"
+    },
+    {
+      "path": "site/zh/language/syntax.md",
+      "sha256": "ebb113a0782bfcb3f650b216510b93bdbbd2aa90f774315071ffdb35d58d6360"
+    },
+    {
+      "path": "site/zh/language/themes-and-icons.md",
+      "sha256": "6d7cf0be5651274e72a511665e216ac9c08b4deeffc002415e3b6eb839011273"
+    },
+    {
+      "path": "site/zh/reference/diagnostics-and-limits.md",
+      "sha256": "445293b2efba5a7b11a935fcc732e76119a624acac4bf32ebc19834c3d9c354f"
+    },
+    {
+      "path": "site/zh/reference/versioning-and-safety.md",
+      "sha256": "74c0dac1f836e1ab94ab380b4877a75e4ced827c604904bea3f8b906e9a68d4d"
+    },
+    {
+      "path": "site/guide/agent-workflow.md",
+      "sha256": "66fe4c3c97afad3a740d9ab824c5aae3f43783bfa251fe0347666b38bc3afc9b"
+    },
+    {
+      "path": "site/ja/guide/agent-workflow.md",
+      "sha256": "66fe4c3c97afad3a740d9ab824c5aae3f43783bfa251fe0347666b38bc3afc9b"
+    },
+    {
+      "path": "site/zh/guide/agent-workflow.md",
+      "sha256": "66fe4c3c97afad3a740d9ab824c5aae3f43783bfa251fe0347666b38bc3afc9b"
+    },
+    {
+      "path": "site/ko/guide/agent-workflow.md",
+      "sha256": "66fe4c3c97afad3a740d9ab824c5aae3f43783bfa251fe0347666b38bc3afc9b"
     }
   ]
 }

@@ -1,0 +1,1 @@
+Use Stack to create or edit the architecture described below. Read https://stack-diagram.com/docs/guide/agent-workflow.md and follow its local validation and safety workflow. Read the relevant language reference and examples as needed. Deliver editable .stack source and report verification results. Architecture requirements:

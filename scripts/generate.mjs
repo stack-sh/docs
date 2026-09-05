@@ -45,6 +45,21 @@ export async function generate(directory = root, check = false) {
   const metadata = JSON.parse(await readFile(path.join(directory, 'content/skill-metadata.json'), 'utf8'));
   const release = JSON.parse(await readFile(path.join(directory, 'content/cli-release.json'), 'utf8'));
   const outputs = renderGuidance(workflow, metadata, release);
+  const siteRoot = path.join(directory, 'content/site');
+  const siteFiles = await filePaths(siteRoot);
+  if (siteFiles.length > 0) {
+    const prompt = (await readFile(path.join(directory, 'content/agent-prompt.txt'), 'utf8')).trimEnd();
+    for (const file of siteFiles) {
+      assert.ok(file.endsWith('.md'), `Only Markdown source is supported: ${file}`);
+      const source = await readFile(path.join(siteRoot, file), 'utf8');
+      const rendered = source.replaceAll('{{cliVersion}}', release.version).replaceAll('{{agentPrompt}}', prompt);
+      assert.ok(!/\{\{[^}]+\}\}/.test(rendered), `Unknown site template token: ${file}`);
+      outputs[`site/${file}`] = rendered;
+    }
+    for (const locale of ['', 'ja/', 'zh/', 'ko/']) {
+      outputs[`site/${locale}guide/agent-workflow.md`] = outputs['guide/agent-workflow.md'];
+    }
+  }
   const manifest = {
     schemaVersion: '1.0',
     cli: release,

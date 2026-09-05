@@ -9,6 +9,17 @@ skill and the human-readable workflow are generated from this one source. Skill
 discovery metadata lives in `content/skill-metadata.json`, and published CLI
 identity lives in `content/cli-release.json`.
 
+The four-locale site sources live in `content/site/`. They were imported from
+`stack-sh/web` commit `c0c773fd2721a177c56406732c010808269e30bc` under Apache-2.0.
+The original 56 page paths are preserved. Four generated `guide/agent-workflow.md`
+pages expose the canonical English instructions used by the skill; the localized
+coding-agent guides explain this and share one copyable prompt from
+`content/agent-prompt.txt`. This avoids hand-maintaining the validation workflow
+both in a guide and a skill. `{{cliVersion}}` comes from the release lock.
+
+`generated/site/` contains complete Markdown inputs for the website. Website
+presentation, images, VitePress configuration, and deployment are not owned here.
+
 Language syntax, schemas, and canonical examples remain owned by
 [stack-sh/specification](https://github.com/stack-sh/specification).
 [stack-sh/cli](https://github.com/stack-sh/cli) owns native command behavior and the
@@ -39,7 +50,9 @@ version string alone does not prove a feature is available.
 
 ## Migration status
 
-Shared workflow generation is available here. CLI and Web consumption, the full
-multilingual guide migration, and automated consumer freshness checks are still
-being integrated. Existing public documentation and skill installation remain
-available from their current repositories until those consumer changes land.
+Shared workflow and multilingual source generation are available here. CLI and Web
+consumption and automated consumer freshness checks are still being integrated.
+Existing public documentation and skill installation remain available from their
+current repositories until those consumer changes land. The website's existing
+language, example, link, and build gates must pass when switching to this source;
+source generation alone does not prove rendered-site compatibility.
