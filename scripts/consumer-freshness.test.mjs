@@ -37,7 +37,7 @@ test('verifies pinned manifest integrity and rejects mutable revisions', async (
 test('checks actual installed skill bytes and reports stale production separately', async () => {
   const bytes = Buffer.from(JSON.stringify(manifest));
   const lock = Buffer.from(JSON.stringify({ repository: 'stack-sh/docs', revision: 'a'.repeat(40), manifestSha256: hash(bytes) }));
-  const fetchBytes = async url => url.endsWith('/generated/manifest.json') ? bytes : url.endsWith('/SKILL.md') ? Buffer.from(skill) : lock;
+  const fetchBytes = async url => url.includes('/git/ref/heads/main') ? Buffer.from(JSON.stringify({ object: { type: 'commit', sha: 'b'.repeat(40) } })) : url.endsWith('/generated/manifest.json') ? bytes : url.endsWith('/SKILL.md') ? Buffer.from(skill) : lock;
   await auditConsumers(manifest, fetchBytes);
   await assert.rejects(auditConsumers(manifest, async url => url.endsWith('/SKILL.md') ? Buffer.from('hand edited') : fetchBytes(url)), /CLI skill differs/);
   await assert.rejects(auditConsumers(manifest, async url => {
