@@ -4,7 +4,15 @@
 
 ## 安装原生 CLI
 
-对于终端工作流和本地自动化，请使用 `brew install stack-sh/tap/stack` 安装由 Stack 维护的 Homebrew formula。它使用规范的 Stack CLI 0.5.0 发布归档，并支持符合 Homebrew 当前 Tier 1 要求的 Apple Silicon macOS，以及 arm64 / x86_64 的 glibc Linux。Homebrew 通过 `brew upgrade stack-sh/tap/stack` 管理升级；卸载 formula 不会删除 Stack 配置和图标存储。有关准确的平台矩阵、直接安装方式和恢复策略，请参阅 [CLI 分发约定](https://github.com/stack-sh/cli/blob/main/docs/distribution.md#homebrew-installation)。
+对于终端工作流和本地自动化，请使用 `brew install stack-sh/tap/stack` 安装由 Stack 维护的 Homebrew formula。它使用规范的 Stack CLI 0.5.1 发布归档，并支持符合 Homebrew 当前 Tier 1 要求的 Apple Silicon macOS，以及 arm64 / x86_64 的 glibc Linux。Homebrew 通过 `brew upgrade stack-sh/tap/stack` 管理升级；卸载 formula 不会删除 Stack 配置和图标存储。有关准确的平台矩阵、直接安装方式和恢复策略，请参阅 [CLI 分发约定](https://github.com/stack-sh/cli/blob/main/docs/distribution.md#homebrew-installation)。
+
+Rust 用户也可以使用 Rust 1.85 或更高版本的工具链及原生链接器，从 crates.io 安装同一个 CLI：
+
+`cargo install stack-diagram-cli --version 0.5.1 --locked`
+
+`stack --version`
+
+在 macOS 或 glibc Linux 的 arm64 / x86_64 上，它仅使用 registry 依赖构建 `stack` 二进制。升级时用目标已发布版本重新运行安装命令；卸载使用 `cargo uninstall stack-diagram-cli`。请为同一个二进制位置选择一种安装方式，避免 `PATH` 冲突；Stack 不会自行更新。Cargo 不会自动安装 shell 补全或手册文件，前提条件和可选集成请参阅 [Cargo 安装约定](https://github.com/stack-sh/cli/blob/main/docs/distribution.md#cargo-installation)。Aqua 用户可以使用[官方维护的 registry](https://github.com/stack-sh/cli/blob/main/aqua/README.md)。
 
 ## 编写第一份文档
 
