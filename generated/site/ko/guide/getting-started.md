@@ -4,7 +4,7 @@ Stack을 가장 빠르게 사용하는 방법은 브라우저 [Playground](https
 
 ## 네이티브 CLI 설치
 
-터미널 워크플로와 로컬 자동화에서는 `brew install stack-sh/tap/stack`으로 Stack이 관리하는 Homebrew formula를 설치합니다. 이 formula는 표준 Stack CLI 0.4.0 릴리스 아카이브를 사용하며, Homebrew의 현재 Tier 1 요구 사항을 충족하는 Apple Silicon macOS와 arm64 / x86_64 glibc Linux를 지원합니다. 업그레이드는 Homebrew가 `brew upgrade stack-sh/tap/stack`으로 관리하며, formula를 제거해도 Stack 설정과 아이콘 저장소는 유지됩니다. 정확한 플랫폼 매트릭스, 직접 설치 방법 및 복구 정책은 [CLI 배포 계약](https://github.com/stack-sh/cli/blob/main/docs/distribution.md#homebrew-installation)을 참고하세요.
+터미널 워크플로와 로컬 자동화에서는 `brew install stack-sh/tap/stack`으로 Stack이 관리하는 Homebrew formula를 설치합니다. 이 formula는 표준 Stack CLI 0.5.0 릴리스 아카이브를 사용하며, Homebrew의 현재 Tier 1 요구 사항을 충족하는 Apple Silicon macOS와 arm64 / x86_64 glibc Linux를 지원합니다. 업그레이드는 Homebrew가 `brew upgrade stack-sh/tap/stack`으로 관리하며, formula를 제거해도 Stack 설정과 아이콘 저장소는 유지됩니다. 정확한 플랫폼 매트릭스, 직접 설치 방법 및 복구 정책은 [CLI 배포 계약](https://github.com/stack-sh/cli/blob/main/docs/distribution.md#homebrew-installation)을 참고하세요.
 
 ## 첫 문서 작성
 
