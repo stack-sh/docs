@@ -4,7 +4,7 @@
 
 ## 安装原生 CLI
 
-对于终端工作流和本地自动化，请使用 `brew install stack-sh/tap/stack` 安装由 Stack 维护的 Homebrew formula。它使用规范的 Stack CLI 0.4.0 发布归档，并支持符合 Homebrew 当前 Tier 1 要求的 Apple Silicon macOS，以及 arm64 / x86_64 的 glibc Linux。Homebrew 通过 `brew upgrade stack-sh/tap/stack` 管理升级；卸载 formula 不会删除 Stack 配置和图标存储。有关准确的平台矩阵、直接安装方式和恢复策略，请参阅 [CLI 分发约定](https://github.com/stack-sh/cli/blob/main/docs/distribution.md#homebrew-installation)。
+对于终端工作流和本地自动化，请使用 `brew install stack-sh/tap/stack` 安装由 Stack 维护的 Homebrew formula。它使用规范的 Stack CLI 0.5.0 发布归档，并支持符合 Homebrew 当前 Tier 1 要求的 Apple Silicon macOS，以及 arm64 / x86_64 的 glibc Linux。Homebrew 通过 `brew upgrade stack-sh/tap/stack` 管理升级；卸载 formula 不会删除 Stack 配置和图标存储。有关准确的平台矩阵、直接安装方式和恢复策略，请参阅 [CLI 分发约定](https://github.com/stack-sh/cli/blob/main/docs/distribution.md#homebrew-installation)。
 
 ## 编写第一份文档
 

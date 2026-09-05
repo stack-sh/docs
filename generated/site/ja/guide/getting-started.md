@@ -4,7 +4,7 @@
 
 ## Native CLIをinstallする
 
-Terminal workflowとlocal automationでは、owner管理のHomebrew formulaを`brew install stack-sh/tap/stack`でinstallします。CanonicalなStack CLI 0.4.0 release archiveを使用し、Homebrewの現行Tier 1要件を満たすApple Silicon macOSと、arm64 / x86_64のglibc Linuxをsupportします。UpgradeはHomebrewが`brew upgrade stack-sh/tap/stack`で管理し、formulaをuninstallしてもStackのconfigとicon storeは保持されます。正確なplatform matrix、direct install、recovery policyは[CLI distribution contract](https://github.com/stack-sh/cli/blob/main/docs/distribution.md#homebrew-installation)を参照してください。
+Terminal workflowとlocal automationでは、owner管理のHomebrew formulaを`brew install stack-sh/tap/stack`でinstallします。CanonicalなStack CLI 0.5.0 release archiveを使用し、Homebrewの現行Tier 1要件を満たすApple Silicon macOSと、arm64 / x86_64のglibc Linuxをsupportします。UpgradeはHomebrewが`brew upgrade stack-sh/tap/stack`で管理し、formulaをuninstallしてもStackのconfigとicon storeは保持されます。正確なplatform matrix、direct install、recovery policyは[CLI distribution contract](https://github.com/stack-sh/cli/blob/main/docs/distribution.md#homebrew-installation)を参照してください。
 
 ## 最初のdocumentを書く
 
