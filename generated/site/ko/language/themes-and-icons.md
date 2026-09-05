@@ -51,7 +51,7 @@ diagram "Dark architecture" {
 | `storage`  | `kind-storage`            |
 | `external` | `kind-external`           |
 
-현재 공개 코어 catalog는 `default`, `light`, `dark`에 이 열 개 식별자를 포함하지만 `postgresql`, `aws`, `github` 같은 벤더 아이콘은 아직 없습니다. 대부분의 문서는 의미에 맞는 `kind`를 선택하고 `icon`을 생략하세요.
+공개 코어 카탈로그는 `default`, `light`, `dark`에 이 열 개의 의미 기반 대체 아이콘을 제공하며 벤더 로고를 번들로 포함하지 않습니다. 대부분의 문서는 의미에 맞는 `kind`를 선택하고 `icon`을 생략하세요. 벤더나 프로젝트 마크가 필요하면 [공급자 아이콘 팩](../guide/provider-icons)을 명시적으로 가져오세요.
 
 ## 명시적 아이콘
 
@@ -117,7 +117,7 @@ diagram "Explicit icon" {
 
 코어 catalog에는 현재 `postgresql`, `aws`, `github`, `docker` 같은 벤더 또는 프로젝트 마크가 없습니다. 유효 테마가 작성한 아이콘 식별자를 제공하지 않으면 노드 kind fallback으로 계속 렌더링하고 `STK5001` 경고를 냅니다.
 
-위 표의 provider-neutral 아이콘을 사용하거나 kind fallback만으로 역할이 명확하면 `icon`을 생략하세요. 벤더 마크는 에셋별 license, 재배포 및 trademark review를 완료해야 별도 catalog에 포함할 수 있습니다.
+위 표의 공급자 중립적인 아이콘을 사용하거나 `kind`의 대체 아이콘만으로 역할이 명확하면 `icon`을 생략하세요. 검토된 벤더 카탈로그는 아트워크 번들이 아닌 [명시적인 공급자 팩 가져오기](../guide/provider-icons)로 사용할 수 있습니다. 각 공급자의 약관을 읽고 동의하고, 가져온 팩에 보존된 에셋별 라이선스·출처·귀속 정보를 준수하세요.
 
 ## Catalog와 에셋 안전성
 
