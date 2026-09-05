@@ -32,7 +32,9 @@ at [stack-diagram.com/docs](https://stack-diagram.com/docs).
 
 ## Generate and verify
 
-Node.js 22 or newer is required. There are no generation dependencies or install scripts.
+Node.js 22 or newer is required. Generation uses only Node.js built-ins and has no
+install scripts. Tests and machine conformance checks require the pinned development
+dependencies; install them with `npm ci --ignore-scripts` first.
 
 ```sh
 npm run generate
@@ -82,11 +84,16 @@ the required consumer PRs and Web deployment finish. Update the affected pins,
 run consumer tests, merge and deploy, then rerun the audit. It never grants write
 permissions or silently auto-merges consumer updates.
 
-## Migration status
+## Consumer ownership
 
-Shared workflow and multilingual source generation are available here. CLI and Web
-consumption and automated consumer freshness checks are still being integrated.
-Existing public documentation and skill installation remain available from their
-current repositories until those consumer changes land. The website's existing
-language, example, link, and build gates must pass when switching to this source;
-source generation alone does not prove rendered-site compatibility.
+CLI consumes a reviewed Docs revision through `skills/docs-source.json`; Web uses
+`scripts/docs-source.json`. Both verify the manifest hash and generated file bytes.
+Do not edit the generated CLI skill or website Markdown inputs in those repositories.
+Edit the original content here, then update only the affected consumer pins through
+reviewed PRs. Equivalent generated content does not require a pin-only update.
+
+The website preserves the original four-locale routes and provides the machine
+discovery endpoint. Its language, example, link, and build gates must continue to
+pass. Source generation and deployment provenance alone do not prove rendered-site
+compatibility: check public HTML/Markdown, agent discovery, and the consumer example
+after deployment, then rerun the consumer freshness audit.
