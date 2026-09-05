@@ -6,6 +6,14 @@ Stack을 가장 빠르게 사용하는 방법은 브라우저 [Playground](https
 
 터미널 워크플로와 로컬 자동화에서는 `brew install stack-sh/tap/stack`으로 Stack이 관리하는 Homebrew formula를 설치합니다. 이 formula는 표준 Stack CLI {{cliVersion}} 릴리스 아카이브를 사용하며, Homebrew의 현재 Tier 1 요구 사항을 충족하는 Apple Silicon macOS와 arm64 / x86_64 glibc Linux를 지원합니다. 업그레이드는 Homebrew가 `brew upgrade stack-sh/tap/stack`으로 관리하며, formula를 제거해도 Stack 설정과 아이콘 저장소는 유지됩니다. 정확한 플랫폼 매트릭스, 직접 설치 방법 및 복구 정책은 [CLI 배포 계약](https://github.com/stack-sh/cli/blob/main/docs/distribution.md#homebrew-installation)을 참고하세요.
 
+Rust 사용자는 Rust 1.85 이상의 도구 체인과 네이티브 링커를 준비한 뒤 crates.io에서 같은 CLI를 설치할 수 있습니다.
+
+`cargo install stack-diagram-cli --version {{cliVersion}} --locked`
+
+`stack --version`
+
+macOS 또는 glibc Linux의 arm64 / x86_64에서 registry 의존성만으로 `stack` 바이너리를 빌드합니다. 업그레이드는 원하는 공개 버전을 지정해 설치 명령을 다시 실행하고, 제거는 `cargo uninstall stack-diagram-cli`를 사용합니다. 같은 바이너리 위치에는 하나의 설치 방식을 선택해 `PATH` 충돌을 피하세요. Stack은 자체 업데이트하지 않습니다. Cargo는 shell completion이나 매뉴얼 파일을 자동 배치하지 않으므로 사전 조건과 선택적 연동은 [Cargo 설치 계약](https://github.com/stack-sh/cli/blob/main/docs/distribution.md#cargo-installation)을 참고하세요. Aqua 사용자는 [공식 관리 registry](https://github.com/stack-sh/cli/blob/main/aqua/README.md)를 사용할 수 있습니다.
+
 ## 첫 문서 작성
 
 에디터 내용을 다음 예제로 바꿉니다.

@@ -2,17 +2,17 @@
   "schemaVersion": "1.0",
   "cli": {
     "repository": "stack-sh/cli",
-    "revision": "6bad86702096bc9d9f10641675eed57203ae4467",
-    "version": "0.5.0"
+    "revision": "1d5f64cc699e42f9ce52ac537903e40c0eb91432",
+    "version": "0.5.1"
   },
   "files": [
     {
       "path": "skills/stack-diagrams/SKILL.md",
-      "sha256": "94ccbe80586569369f35cc2f4d090e55cd0ef0906482b07654aca53399f9e0ae"
+      "sha256": "af399eb4277fa4563f5126cce04e9a4a38feea31880db97c1eb904539a06669c"
     },
     {
       "path": "guide/agent-workflow.md",
-      "sha256": "3e70bef63e2e381d6a930224062a878d4dfff2b8358645c680c7447b6073fd45"
+      "sha256": "b92225a66840f094e02ee42f32131f075287044e2d2f0a73ad60335e906ccf86"
     },
     {
       "path": "site/examples/index.md",
@@ -24,7 +24,7 @@
     },
     {
       "path": "site/guide/getting-started.md",
-      "sha256": "ab20aa8280483326f8e93a9552d28ba1a099da382ebb9729a34392738736574b"
+      "sha256": "1162aa9d07c7ac323ef877e0f971cc2a5b47ec5da97e650e0daa571040edb232"
     },
     {
       "path": "site/guide/playground.md",
@@ -52,7 +52,7 @@
     },
     {
       "path": "site/ja/guide/getting-started.md",
-      "sha256": "4a561f5db209c51bf48c0ed225b2961503806d9b80fced6a0c78e266e7a8cd76"
+      "sha256": "20546c410668abce3011fe18daed34cc86ab4c317bae8ab19b5b9ee8a7626e4b"
     },
     {
       "path": "site/ja/guide/playground.md",
@@ -108,7 +108,7 @@
     },
     {
       "path": "site/ko/guide/getting-started.md",
-      "sha256": "60cd75eebfcf4e1089feebe8cbf294975a0226a68e8e2aa0b52f6828edce13b9"
+      "sha256": "d45714fdb4a3c873e1a26803f6e4505c613e193ee854f89d226f9e4f4c5e8ace"
     },
     {
       "path": "site/ko/guide/playground.md",
@@ -192,7 +192,7 @@
     },
     {
       "path": "site/zh/guide/getting-started.md",
-      "sha256": "8ac4cb6f87158569f587ff4a4a63d68e0c312b707aece5023b0a8d8ac1ffee9b"
+      "sha256": "b2b851390a21c8534112c3691e9007dd49bd035c6fe7d5181ed43cfd865e075d"
     },
     {
       "path": "site/zh/guide/playground.md",
@@ -240,19 +240,19 @@
     },
     {
       "path": "site/guide/agent-workflow.md",
-      "sha256": "a62497914c1648494c22009b3e16a96e3f5190e73fb0b67225bef64f3063c0e4"
+      "sha256": "50e2396e950ae319dbfd26a3dbb06c3a1163cec3cbcb7dac8eb8ca01b618bfd8"
     },
     {
       "path": "site/ja/guide/agent-workflow.md",
-      "sha256": "a62497914c1648494c22009b3e16a96e3f5190e73fb0b67225bef64f3063c0e4"
+      "sha256": "50e2396e950ae319dbfd26a3dbb06c3a1163cec3cbcb7dac8eb8ca01b618bfd8"
     },
     {
       "path": "site/zh/guide/agent-workflow.md",
-      "sha256": "a62497914c1648494c22009b3e16a96e3f5190e73fb0b67225bef64f3063c0e4"
+      "sha256": "50e2396e950ae319dbfd26a3dbb06c3a1163cec3cbcb7dac8eb8ca01b618bfd8"
     },
     {
       "path": "site/ko/guide/agent-workflow.md",
-      "sha256": "a62497914c1648494c22009b3e16a96e3f5190e73fb0b67225bef64f3063c0e4"
+      "sha256": "50e2396e950ae319dbfd26a3dbb06c3a1163cec3cbcb7dac8eb8ca01b618bfd8"
     },
     {
       "path": "machine/v1.0.0/manifest.json",

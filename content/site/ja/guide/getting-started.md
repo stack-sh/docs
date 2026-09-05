@@ -6,6 +6,14 @@
 
 Terminal workflowとlocal automationでは、owner管理のHomebrew formulaを`brew install stack-sh/tap/stack`でinstallします。CanonicalなStack CLI {{cliVersion}} release archiveを使用し、Homebrewの現行Tier 1要件を満たすApple Silicon macOSと、arm64 / x86_64のglibc Linuxをsupportします。UpgradeはHomebrewが`brew upgrade stack-sh/tap/stack`で管理し、formulaをuninstallしてもStackのconfigとicon storeは保持されます。正確なplatform matrix、direct install、recovery policyは[CLI distribution contract](https://github.com/stack-sh/cli/blob/main/docs/distribution.md#homebrew-installation)を参照してください。
 
+Rustを利用している場合は、Rust 1.85以降のtoolchainとnative linkerを用意し、crates.ioから同じCLIをinstallできます。
+
+`cargo install stack-diagram-cli --version {{cliVersion}} --locked`
+
+`stack --version`
+
+macOSまたはglibc Linuxのarm64 / x86_64で、registry由来の依存だけを使ってbinary `stack`をbuildします。Upgradeは目的の公開versionを指定してinstall commandを実行し、uninstallは`cargo uninstall stack-diagram-cli`です。同じbinaryの配置先には1つのinstallerを選び、`PATH`上の競合を避けてください。Stack自身は自己更新しません。Cargoはshell completionやmanualを自動配置しないため、前提条件と任意のshell連携は[Cargo installation contract](https://github.com/stack-sh/cli/blob/main/docs/distribution.md#cargo-installation)を参照してください。Aquaでは[owner registry](https://github.com/stack-sh/cli/blob/main/aqua/README.md)を利用できます。
+
 ## 最初のdocumentを書く
 
 Editorを次のexampleへ置き換えます。

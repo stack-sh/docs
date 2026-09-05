@@ -4,7 +4,15 @@ The fastest way to use Stack is the browser [Playground](https://stack-diagram.c
 
 ## Install the native CLI
 
-For terminal workflows and local automation, install the owner-maintained Homebrew formula with `brew install stack-sh/tap/stack`. It uses the canonical Stack CLI 0.5.0 release archive and supports Apple Silicon macOS plus glibc-based Linux on arm64 and x86_64 when the host meets Homebrew's current tier-1 requirements. Homebrew owns upgrades through `brew upgrade stack-sh/tap/stack`; uninstalling the formula leaves your Stack configuration and icon store in place. See the [CLI distribution contract](https://github.com/stack-sh/cli/blob/main/docs/distribution.md#homebrew-installation) for the exact platform matrix, direct-install alternative, and recovery policy.
+For terminal workflows and local automation, install the owner-maintained Homebrew formula with `brew install stack-sh/tap/stack`. It uses the canonical Stack CLI 0.5.1 release archive and supports Apple Silicon macOS plus glibc-based Linux on arm64 and x86_64 when the host meets Homebrew's current tier-1 requirements. Homebrew owns upgrades through `brew upgrade stack-sh/tap/stack`; uninstalling the formula leaves your Stack configuration and icon store in place. See the [CLI distribution contract](https://github.com/stack-sh/cli/blob/main/docs/distribution.md#homebrew-installation) for the exact platform matrix, direct-install alternative, and recovery policy.
+
+Rust users can install the same CLI from crates.io with a working Rust 1.85 or newer toolchain and native linker:
+
+`cargo install stack-diagram-cli --version 0.5.1 --locked`
+
+`stack --version`
+
+This builds the `stack` binary from registry-only dependencies on macOS or glibc Linux, on arm64 or x86_64. Cargo owns upgrades: run the install command with the desired released version; uninstall with `cargo uninstall stack-diagram-cli`. Choose one installer for a given binary location to avoid competing copies on `PATH`; Stack does not update itself. Cargo does not install shell completion or manual files automatically; see the [Cargo installation contract](https://github.com/stack-sh/cli/blob/main/docs/distribution.md#cargo-installation) for prerequisites and optional shell integration. Aqua users can use the [owner registry](https://github.com/stack-sh/cli/blob/main/aqua/README.md).
 
 ## Write your first document
 
