@@ -51,7 +51,7 @@ Theme identifierは通常のStack identifier syntaxを使います。一度登�
 | `storage`  | `kind-storage`                |
 | `external` | `kind-external`               |
 
-現在のopen core catalogは`default`、`light`、`dark`にこの10 fallback identifierを持ちます。`postgresql`、`aws`、`github`などのvendor iconはまだありません。通常はsemanticな`kind`を選び、`icon`を省略してください。
+Open core catalogは`default`、`light`、`dark`にこの10種類の意味を表すfallbackを持ち、vendor logoは同梱しません。通常は意味に合う`kind`を選び、`icon`を省略してください。Vendorやprojectのmarkには、明示的に取り込む[provider icon pack](../guide/provider-icons)を使います。
 
 ## 明示icon
 
@@ -117,7 +117,7 @@ Semanticな`kind`と明示iconは独立して選びます。たとえば`icon "w
 
 Core catalogは現在、`postgresql`、`aws`、`github`、`docker`などのvendor / project markを収録していません。Effective themeにauthored icon identifierがなければ、node kindのfallbackでrenderを続け、warning `STK5001`を出します。
 
-上表のprovider-neutral iconを選ぶか、kind fallbackだけで役割が伝わる場合は`icon`を省略してください。Vendor markを別catalogへ収録するには、asset単位のlicense、redistribution、trademark reviewが必要です。
+上表のprovider-neutral iconを選ぶか、kind fallbackだけで役割が伝わる場合は`icon`を省略してください。監査済みvendor catalogは、アートワークの同梱ではなく[provider packの明示的な取り込み](../guide/provider-icons)で利用できます。各providerの規約を確認して同意し、取り込んだpackに保持されるassetごとのlicense・出典・帰属情報を守ってください。
 
 ## Catalogとasset safety
 

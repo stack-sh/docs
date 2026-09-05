@@ -51,7 +51,7 @@ diagram "Dark architecture" {
 | `storage`  | `kind-storage`   |
 | `external` | `kind-external`  |
 
-当前开放核心 catalog 在 `default`、`light` 和 `dark` 中包含这十个回退标识符，尚不包含 `postgresql`、`aws` 或 `github` 等厂商图标。多数文档应选择语义 `kind` 并省略 `icon`。
+开放核心catalog在`default`、`light`和`dark`中提供这十个语义回退标识符，不附带厂商标志。多数文档应选择语义`kind`并省略`icon`。如需厂商或项目标志，请显式导入[供应商图标包](../guide/provider-icons)。
 
 ## 显式图标
 
@@ -117,7 +117,7 @@ diagram "Explicit icon" {
 
 核心 catalog 目前不包含 `postgresql`、`aws`、`github` 或 `docker` 等厂商或项目标志。如果有效主题没有编写的图标标识符，引擎会继续使用节点 kind 的回退图标渲染，并发出 `STK5001`。
 
-请优先选择上表中与厂商无关的图标；如果 kind 回退已能表达角色，也可以省略 `icon`。厂商标志只有在逐项完成资源 license、再分发和商标审查后，才能进入独立 catalog。
+请优先选择上表中与厂商无关的图标；如果kind回退已能表达角色，也可以省略`icon`。经过审查的厂商catalog可通过[显式导入供应商图标包](../guide/provider-icons)使用，而不是随产品附带图像。请阅读并接受各供应商条款，并保留包中每项资源的许可、来源和署名信息。
 
 ## Catalog 与资源安全
 

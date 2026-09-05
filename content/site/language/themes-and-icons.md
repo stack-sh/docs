@@ -51,7 +51,7 @@ Every theme provides one fallback for each node kind. If you omit `icon`, this i
 | `storage`  | `kind-storage`                |
 | `external` | `kind-external`               |
 
-The current open core catalog contains these ten fallback identifiers in `default`, `light`, and `dark`. It does not yet contain vendor icons such as `postgresql`, `aws`, or `github`. In most documents, choose the semantic `kind` and omit `icon`.
+The open core catalog includes these ten semantic fallback identifiers in `default`, `light`, and `dark`, not vendor logos. In most documents, choose the semantic `kind` and omit `icon`. For vendor or project marks, use an explicitly imported [provider icon pack](../guide/provider-icons).
 
 ## Explicit icons
 
@@ -117,7 +117,7 @@ Use the semantic `kind` independently from the explicit icon. For example, `icon
 
 The core catalog does not currently include vendor or project marks such as `postgresql`, `aws`, `github`, or `docker`. If the effective theme does not provide an authored icon identifier, rendering continues with the node's kind fallback and warning `STK5001`.
 
-Prefer a provider-neutral icon above or omit `icon` when its kind fallback already communicates the role. Vendor marks require asset-specific license, redistribution, and trademark review before they can ship in a separate catalog.
+Prefer a provider-neutral icon above or omit `icon` when its kind fallback already communicates the role. Audited vendor catalogs are available through [explicit provider-pack import](../guide/provider-icons), not bundled artwork. Review and accept each provider's terms; imported packs preserve asset-specific license, provenance, and attribution.
 
 ## Catalog and asset safety
 

@@ -88,7 +88,7 @@
     },
     {
       "path": "site/ja/language/themes-and-icons.md",
-      "sha256": "5a8db9a572b0b5231ea1620fb23107e6ac04a1f61dfcf25402d9e80944d3c23d"
+      "sha256": "a62ca441e0773d12140a518311b0fc79060f52d4450e29c6107c85ee45823613"
     },
     {
       "path": "site/ja/reference/diagnostics-and-limits.md",
@@ -144,7 +144,7 @@
     },
     {
       "path": "site/ko/language/themes-and-icons.md",
-      "sha256": "fb1eade6dd1b446bdcfa9ccfacbec2d6c702288ae254de939b79938536efb34a"
+      "sha256": "c860ae4ae7d9c642461852c97cd29b1971464a2ec5fce4fe2ea71e41cf19c65c"
     },
     {
       "path": "site/ko/reference/diagnostics-and-limits.md",
@@ -172,7 +172,7 @@
     },
     {
       "path": "site/language/themes-and-icons.md",
-      "sha256": "e82a930f3cb06ed9aa1f95fa160b5f6f8a51fca86ac2e52a1e53b75d2a0e2ff5"
+      "sha256": "4e2a59b62db144914fcd5b6f166524c9472d65a748432da339becad068c2ca7e"
     },
     {
       "path": "site/reference/diagnostics-and-limits.md",
@@ -228,7 +228,7 @@
     },
     {
       "path": "site/zh/language/themes-and-icons.md",
-      "sha256": "6d7cf0be5651274e72a511665e216ac9c08b4deeffc002415e3b6eb839011273"
+      "sha256": "376293b52fac1992c763d970410a72093f26275b97109d17e478d0e7257c339e"
     },
     {
       "path": "site/zh/reference/diagnostics-and-limits.md",
