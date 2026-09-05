@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "audience": "Developers who document and review their technology stack in source control, often with a coding agent.",
+  "job": "Turn a readable description of services, data stores, boundaries, and connections into a diagram for a README or architecture review, and keep it current as the system changes.",
+  "alternatives": "Manual drawing requires maintaining coordinates and styling. General-purpose diagram languages prioritize broader diagram types. Stack focuses on semantic technology-stack documents, theme-managed presentation, and a shared local renderer.",
+  "hero": {
+    "name": "Stack",
+    "tagline": "Write your stack. Get a beautiful diagram.",
+    "description": "Describe your services and connections in text. Stack handles layout and theming, then renders a shareable SVG in your terminal or browser.",
+    "primaryAction": { "text": "Create your first diagram", "link": "/guide/getting-started" },
+    "secondaryAction": { "text": "Try the Playground", "link": "https://stack-diagram.com/" }
+  },
+  "features": [
+    {
+      "id": "beautiful-by-default",
+      "title": "Beautiful by default",
+      "details": "Describe the system, not every box. Automatic layout and coordinated themes keep your diagrams polished without manual positioning or styling.",
+      "evidence": [
+        "https://github.com/stack-sh/theme/blob/main/CONTRACT.md",
+        "https://github.com/stack-sh/engine/tree/main/layout-corpus"
+      ]
+    },
+    {
+      "id": "consistent-everywhere",
+      "title": "Consistent everywhere",
+      "details": "Move between your coding agent, terminal, and browser. The shared engine keeps the same source, theme, and icon packs consistent across workflows.",
+      "evidence": [
+        "https://github.com/stack-sh/engine/blob/main/README.md",
+        "https://github.com/stack-sh/web/blob/main/src/lib/stack-engine.ts",
+        "https://github.com/stack-sh/cli/blob/main/Cargo.toml"
+      ]
+    },
+    {
+      "id": "fast-local-rendering",
+      "title": "Fast, local rendering",
+      "details": "Edit, render, and repeat without a rendering server. Keep your source on your device and export standalone SVG without scripts or external assets.",
+      "evidence": [
+        "https://github.com/stack-sh/engine/blob/main/layout-corpus/README.md#runtime-budget",
+        "https://github.com/stack-sh/engine/blob/main/README.md"
+      ]
+    }
+  ],
+  "firstSuccess": [
+    "Choose the CLI for terminal or coding-agent workflows, or open the Playground without installation.",
+    "Install the CLI through one supported channel; add the optional skill with npx skills add stack-sh/cli.",
+    "Run stack init, check, and render in an empty directory; browser users edit the example and select Run.",
+    "Open or download the SVG, change the source, and render again.",
+    "Explore themes and examples, then provider icons, configuration, and the language reference."
+  ],
+  "claimBoundaries": [
+    "No unmeasured claim that Stack is faster or more beautiful than Mermaid or any other product.",
+    "Cross-workflow consistency assumes matching engine versions, source, theme, and caller-supplied icon packs; it is not a promise across arbitrary versions or fonts in a downstream SVG viewer.",
+    "Fast describes a short local iteration loop, supported by the reproducible corpus benchmark. Native warm-render measurements are not browser cold-start measurements or universal latency guarantees.",
+    "Local rendering does not mean installing tools and loading the website require no network. The engine does not send diagram source to a rendering service.",
+    "Safe SVG means constrained engine output, not immunity from every defect. Third-party icon packs require explicit import and retain their own terms.",
+    "User-facing examples render canonical .stack source with the current site's WASM engine at runtime. Do not publish pre-rendered example SVG as a second source of truth. Approved regression snapshots remain a separate test artifact."
+  ]
+}
