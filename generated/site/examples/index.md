@@ -1,7 +1,7 @@
 # Example gallery
 
-Start with a small diagram, then move through groups, layout constraints, provider icons, and production-like systems. Every thumbnail below is generated from the canonical source pinned to the public Stack specification.
+Start small, then explore groups, layout, and provider icons. Each preview loads a canonical `.stack` source and renders on your device with the same WASM engine as the Playground. Engine updates improve these previews too; no separate SVG images need regeneration.
 
-Provider examples keep artwork caller-owned: install the listed icon packs when you want branded icons. Without a pack, the same source remains valid and renders with Stack's deterministic missing-icon fallback.
+This gallery uses built-in fallback shapes for provider icons. To use branded artwork in your own diagram, explicitly import the listed icon packs in the [Playground](../guide/provider-icons.md) or [CLI](../guide/getting-started.md). Source links remain available when JavaScript or preview loading is unavailable.
 
 <ExampleGallery locale="en" />

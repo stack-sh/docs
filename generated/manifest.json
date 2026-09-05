@@ -16,7 +16,7 @@
     },
     {
       "path": "site/examples/index.md",
-      "sha256": "458d6c20c38e7575a106674cae869aed2ec8470aaa51f0a4625afc59017cf50f"
+      "sha256": "39074c46d21db23757e0f2a7395f0b5fecd2123ac47e8bcf68bab93219b2f2da"
     },
     {
       "path": "site/guide/coding-agents.md",
@@ -44,7 +44,7 @@
     },
     {
       "path": "site/ja/examples/index.md",
-      "sha256": "56b4ca1171feaa383b4b9af622d8a899e19d02b26aa1c6011682d81d67f7647a"
+      "sha256": "f1320c67f8c902f69a8d095e0fdac4baa8ef204768b56f5ed3c0131a55709b73"
     },
     {
       "path": "site/ja/guide/coding-agents.md",
@@ -100,7 +100,7 @@
     },
     {
       "path": "site/ko/examples/index.md",
-      "sha256": "fcc69e690339ab7a89c8dd2a67f9525cddae6a1c5b867068db13a5814d105de0"
+      "sha256": "25a64a9aa5087cf4cdddf968c2f812e0f58b3497c072c01e1b53380f568ba5cf"
     },
     {
       "path": "site/ko/guide/coding-agents.md",
@@ -184,7 +184,7 @@
     },
     {
       "path": "site/zh/examples/index.md",
-      "sha256": "de0575c5ffe6d1f525023f4eea20293fd9e6332fdfeb8973ace1673b23d6a535"
+      "sha256": "738b43483cbef305b120f351c5a76169c42d669456f2843fe836798a2fb13913"
     },
     {
       "path": "site/zh/guide/coding-agents.md",
