@@ -64,6 +64,21 @@ control failure notifications. Web additionally audits the release it deploys.
 Site shell examples receive a generated `$ ` prompt; the installable skill keeps
 executable command lines without prompts. The canonical source remains shared.
 
+## Consumer freshness
+
+`npm run consumers:check` compares the current generated content with the CLI and
+Web main-branch pins and the website's public `/docs-source.json` deployment
+provenance. It verifies every pinned manifest hash and the actual CLI skill bytes.
+Equivalent content at an older commit is accepted; a website-only edit does not
+require a pointless CLI skill update. Website production provenance identifies the
+deployed source; it is not a substitute for checking rendered pages after release.
+
+The read-only Consumer freshness workflow runs after Docs main changes, daily,
+and on manual dispatch. A source change may intentionally fail this audit until
+the required consumer PRs and Web deployment finish. Update the affected pins,
+run consumer tests, merge and deploy, then rerun the audit. It never grants write
+permissions or silently auto-merges consumer updates.
+
 ## Migration status
 
 Shared workflow and multilingual source generation are available here. CLI and Web
