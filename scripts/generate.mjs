@@ -57,7 +57,7 @@ export async function generate(directory = root, check = false) {
       outputs[`site/${file}`] = rendered;
     }
     for (const locale of ['', 'ja/', 'zh/', 'ko/']) {
-      outputs[`site/${locale}guide/agent-workflow.md`] = outputs['guide/agent-workflow.md'];
+      outputs[`site/${locale}guide/agent-workflow.md`] = outputs['guide/agent-workflow.md'].replace(/```sh\n([\s\S]*?)```/g, (_, commands) => '```sh\n' + commands.trimEnd().split('\n').map(line => '$ ' + line).join('\n') + '\n```');
     }
   }
   const manifest = {

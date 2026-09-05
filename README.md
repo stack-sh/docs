@@ -48,6 +48,22 @@ instructions does not publish a new CLI binary. Recheck capability statements
 against the released binary's help when updating the release lock; changing a
 version string alone does not prove a feature is available.
 
+## Keep the published CLI reference current
+
+Run `npm run release:sync` after a stable CLI release. It resolves the published
+tag to its exact commit, updates `content/cli-release.json`, and regenerates all
+version declarations. Review changed capabilities and run tests and the verified
+release binary smoke before opening a PR. After merging, update both consumer
+Docs pins and verify the website deployment and CLI skill installation.
+
+`npm run release:check` and the read-only daily freshness workflow reject a newer
+unrecorded stable release or a retargeted tag. They do not publish, install a CLI,
+or merge changes. Scheduled runs can be delayed and GitHub notification settings
+control failure notifications. Web additionally audits the release it deploys.
+
+Site shell examples receive a generated `$ ` prompt; the installable skill keeps
+executable command lines without prompts. The canonical source remains shared.
+
 ## Migration status
 
 Shared workflow and multilingual source generation are available here. CLI and Web

@@ -24,6 +24,10 @@ jobs:
         run: npm test
       - name: Verify committed generated content
         run: npm run check
+      - name: Check published CLI freshness
+        run: npm run release:check
+        env:
+          GH_TOKEN: ${{ github.token }}
       - name: Verify and exercise published CLI
         env:
           GH_TOKEN: ${{ github.token }}

@@ -8,11 +8,11 @@
   "files": [
     {
       "path": "skills/stack-diagrams/SKILL.md",
-      "sha256": "a7f39a9d3da0f7074ea348bebb0260a642f202ee5f2026742c08972f75c7f2a6"
+      "sha256": "cb0efd01b5ae4762af18b57e9eb4e88ebcec860dc0aa9212235a2f5f3f742182"
     },
     {
       "path": "guide/agent-workflow.md",
-      "sha256": "66fe4c3c97afad3a740d9ab824c5aae3f43783bfa251fe0347666b38bc3afc9b"
+      "sha256": "f2a20b466c4355eb42f7063b781eab32ff1dd87424d26f70bef070a8b70353dc"
     },
     {
       "path": "site/examples/index.md",
@@ -240,19 +240,19 @@
     },
     {
       "path": "site/guide/agent-workflow.md",
-      "sha256": "66fe4c3c97afad3a740d9ab824c5aae3f43783bfa251fe0347666b38bc3afc9b"
+      "sha256": "35d435082b86b48fa4b456262d7eb219e622221ae0906dca6dbe9a6619d02ef9"
     },
     {
       "path": "site/ja/guide/agent-workflow.md",
-      "sha256": "66fe4c3c97afad3a740d9ab824c5aae3f43783bfa251fe0347666b38bc3afc9b"
+      "sha256": "35d435082b86b48fa4b456262d7eb219e622221ae0906dca6dbe9a6619d02ef9"
     },
     {
       "path": "site/zh/guide/agent-workflow.md",
-      "sha256": "66fe4c3c97afad3a740d9ab824c5aae3f43783bfa251fe0347666b38bc3afc9b"
+      "sha256": "35d435082b86b48fa4b456262d7eb219e622221ae0906dca6dbe9a6619d02ef9"
     },
     {
       "path": "site/ko/guide/agent-workflow.md",
-      "sha256": "66fe4c3c97afad3a740d9ab824c5aae3f43783bfa251fe0347666b38bc3afc9b"
+      "sha256": "35d435082b86b48fa4b456262d7eb219e622221ae0906dca6dbe9a6619d02ef9"
     }
   ]
 }
