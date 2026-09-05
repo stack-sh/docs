@@ -1,18 +1,126 @@
 # 快速开始
 
-使用 Stack 最快的方法是浏览器 [Playground](https://stack-diagram.com/)。格式化器、验证器、布局引擎和 SVG 渲染器都通过 WebAssembly 在本地运行；无需安装命令，也不会把源文件发送到渲染 API。
+选择一种安装方式，按本页步骤生成第一个SVG。在终端或[coding agent](./coding-agents)中工作时使用CLI；无需安装即可体验的方式是打开[Playground](https://stack-diagram.com/)，并使用下方的浏览器示例。
 
-## 安装原生 CLI
+## 安装CLI
 
-对于终端工作流和本地自动化，请使用 `brew install stack-sh/tap/stack` 安装由 Stack 维护的 Homebrew formula。它使用规范的 Stack CLI {{cliVersion}} 发布归档，并支持符合 Homebrew 当前 Tier 1 要求的 Apple Silicon macOS，以及 arm64 / x86_64 的 glibc Linux。Homebrew 通过 `brew upgrade stack-sh/tap/stack` 管理升级；卸载 formula 不会删除 Stack 配置和图标存储。有关准确的平台矩阵、直接安装方式和恢复策略，请参阅 [CLI 分发约定](https://github.com/stack-sh/cli/blob/main/docs/distribution.md#homebrew-installation)。
+Stack CLI {{cliVersion}}支持arm64 / x86_64的macOS和glibc Linux。预编译文件需要macOS 13或glibc 2.31及以上；不支持Windows和Alpine/musl。请选择一种安装方式，避免多个二进制文件在`PATH`中冲突。准确的支持范围以[分发契约](https://github.com/stack-sh/cli/blob/main/docs/distribution.md#supported-platform-matrix)为准。
 
-Rust 用户也可以使用 Rust 1.85 或更高版本的工具链及原生链接器，从 crates.io 安装同一个 CLI：
+### Homebrew
 
-`cargo install stack-diagram-cli --version {{cliVersion}} --locked`
+在Apple Silicon macOS或受支持的Linux上使用已安装的Homebrew。主机还必须满足Homebrew自身的Tier 1要求。
 
-`stack --version`
+```text
+brew install stack-sh/tap/stack
+```
 
-在 macOS 或 glibc Linux 的 arm64 / x86_64 上，它仅使用 registry 依赖构建 `stack` 二进制。升级时用目标已发布版本重新运行安装命令；卸载使用 `cargo uninstall stack-diagram-cli`。请为同一个二进制位置选择一种安装方式，避免 `PATH` 冲突；Stack 不会自行更新。Cargo 不会自动安装 shell 补全或手册文件，前提条件和可选集成请参阅 [Cargo 安装约定](https://github.com/stack-sh/cli/blob/main/docs/distribution.md#cargo-installation)。Aqua 用户可以使用[官方维护的 registry](https://github.com/stack-sh/cli/blob/main/aqua/README.md)。
+### Cargo
+
+需要Rust 1.85及以上和本地链接器：macOS使用Xcode Command Line Tools，Linux使用C编译器和链接器。将Cargo的bin目录加入`PATH`。包名为`stack-diagram-cli`，安装后的命令为`stack`。
+
+```text
+cargo install stack-diagram-cli --version {{cliVersion}} --locked
+```
+
+### Aqua
+
+在Git仓库中，将以下内容保存为`aqua.yaml`：
+
+```yaml
+checksum:
+  enabled: true
+  require_checksum: true
+  supported_envs:
+    - all
+registries:
+  - name: stack-sh
+    type: github_content
+    repo_owner: stack-sh
+    repo_name: cli
+    ref: 42702cda91a4156901b9a601bd143c43dcf05766
+    path: aqua/registry.yaml
+packages:
+  - name: stack-sh/cli@v{{cliVersion}}
+    registry: stack-sh
+```
+
+将以下限定范围的策略保存为`aqua-policy.yaml`，审阅后允许该策略并安装：
+
+```yaml
+registries:
+  - name: stack-sh
+    type: github_content
+    repo_owner: stack-sh
+    repo_name: cli
+    ref: 'Version == "42702cda91a4156901b9a601bd143c43dcf05766"'
+    path: aqua/registry.yaml
+packages:
+  - name: stack-sh/cli
+    registry: stack-sh
+    version: semver(">= 0.3.0")
+```
+
+```text
+aqua policy allow
+aqua update-checksum
+aqua install
+```
+
+提交`aqua.yaml`、`aqua-policy.yaml`和生成的`aqua-checksums.json`。确保Aqua的bin目录在`PATH`中。注册表固定到不可变revision，请勿改成`main`。
+
+### 直接下载
+
+在受支持的主机上安装并登录[GitHub CLI](https://cli.github.com/)，然后在POSIX shell中执行。此流程下载到新的临时目录，验证校验和与确切标签的发布者身份后才解压，并拒绝替换已有的`~/.local/bin/stack`。macOS文件使用ad-hoc签名，未经公证。任何验证失败时都应停止。
+
+```text
+(
+  set -eu
+  version={{cliVersion}}
+  case "$(uname -s)/$(uname -m)" in
+    Darwin/arm64) target=aarch64-apple-darwin ;;
+    Darwin/x86_64) target=x86_64-apple-darwin ;;
+    Linux/aarch64) target=aarch64-unknown-linux-gnu ;;
+    Linux/x86_64) target=x86_64-unknown-linux-gnu ;;
+    *) echo "Unsupported platform" >&2; exit 1 ;;
+  esac
+  archive="stack-v${version}-${target}.tar.gz"
+  download_dir=$(mktemp -d)
+  cd "$download_dir"
+  gh release download "v$version" --repo stack-sh/cli --pattern "$archive" --pattern "stack-v${version}-checksums.txt"
+  awk -v archive="$archive" '$2 == archive { print }' "stack-v${version}-checksums.txt" > archive-checksum.txt
+  if command -v sha256sum >/dev/null 2>&1; then
+    sha256sum --check archive-checksum.txt
+  else
+    shasum -a 256 --check archive-checksum.txt
+  fi
+  gh attestation verify "$archive" --repo stack-sh/cli --signer-workflow stack-sh/cli/.github/workflows/release.yaml --source-ref "refs/tags/v$version" --deny-self-hosted-runners
+  tar -xzf "$archive"
+  mkdir -p "$HOME/.local/bin"
+  test ! -e "$HOME/.local/bin/stack"
+  install -m 0755 "stack-v${version}-${target}/stack" "$HOME/.local/bin/stack"
+)
+export PATH="$HOME/.local/bin:$PATH"
+```
+
+## 生成第一个SVG
+
+在新的空工作目录中执行：
+
+```sh
+$ stack --version
+$ stack init
+$ stack check diagram.stack
+$ stack render diagram.stack -o diagram.svg
+```
+
+预期结果：显示`stack {{cliVersion}}`、生成`diagram.stack`、检查无错误，并生成非空的`diagram.svg`。用浏览器打开SVG或将其加入README。`stack init`会保护已有文件，请使用新目录而非覆盖原有工作。
+
+修改`diagram.stack`描述自己的系统，再次运行check和render。需要格式化时执行：
+
+```sh
+$ stack fmt diagram.stack
+$ stack fmt --check diagram.stack
+```
 
 ## 编写第一份文档
 
@@ -92,3 +200,16 @@ diagram "Checkout" {
 - [节点与分组](../language/nodes-and-groups)介绍组件和边界建模。
 - [连线与布局](../language/edges-and-layout)介绍关系和布局意图。
 - 选择视觉系统或显式图标前，请阅读[主题与图标](../language/themes-and-icons)。
+
+## 更新或卸载
+
+Stack不会自行更新。请使用安装该二进制文件的工具进行管理。卸载二进制文件不会删除配置和已导入的图标包。
+
+| 安装方式 | 更新 | 卸载 |
+| --- | --- | --- |
+| Homebrew | `brew upgrade stack-sh/tap/stack` | `brew uninstall stack-sh/tap/stack` |
+| Cargo | 用所需版本重新运行上面的Cargo安装命令。 | `cargo uninstall stack-diagram-cli` |
+| Aqua | `aqua update`, `aqua update-checksum`, `aqua install` | 保留此配置时运行`aqua rm -m pl stack-sh,stack-sh/cli`，然后从`aqua.yaml`移除`stack-sh/cli`。其他项目需要此包时可能会重新安装。 |
+| 直接下载 | 验证新release后，仅替换直接安装的二进制文件。 | 仅删除自己直接安装的二进制文件（`~/.local/bin/stack`）。 |
+
+补全、man页面与恢复方法见[shell集成](https://github.com/stack-sh/cli/blob/main/docs/completions.md)、[安全更新](https://github.com/stack-sh/cli/blob/main/docs/self-update.md)和[供应链验证](https://github.com/stack-sh/cli/blob/main/docs/supply-chain.md)。

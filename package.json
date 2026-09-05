@@ -12,7 +12,7 @@
     "generate": "node scripts/generate.mjs",
     "check": "node scripts/generate.mjs --check",
     "test": "node --test scripts/*.test.mjs",
-    "smoke": "node scripts/smoke-skill.mjs"
+    "smoke": "node scripts/smoke-skill.mjs && node scripts/first-render.mjs"
   },
   "devDependencies": {
     "@stack-sh/engine": "0.7.0",
