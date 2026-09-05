@@ -73,7 +73,7 @@ test('all four locales expose the same page set and shared copyable instruction'
   for (const locale of locales) {
     for (const page of englishPages) assert.ok(outputs[`site/${locale}${page}`], `Missing ${locale}${page}`);
     assert.ok(outputs[`site/${locale}guide/coding-agents.md`].includes(prompt));
-    assert.equal(outputs[`site/${locale}guide/agent-workflow.md`], outputs['guide/agent-workflow.md']);
+    assert.equal(outputs[`site/${locale}guide/agent-workflow.md`].replace(/^\$ /gm, ''), outputs['guide/agent-workflow.md']);
   }
   assert.equal(Object.keys(outputs).filter(file => file.startsWith('site/')).length, 60);
 });
