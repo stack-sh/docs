@@ -1,0 +1,132 @@
+{
+  "schemaVersion": "1.0",
+  "languageVersion": "1.0",
+  "source": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/SPECIFICATION.md",
+  "diagnostics": [
+    {
+      "code": "STK1001",
+      "severity": "error",
+      "meaning": "Input is not valid UTF-8"
+    },
+    {
+      "code": "STK1002",
+      "severity": "error",
+      "meaning": "A byte order mark is present"
+    },
+    {
+      "code": "STK1003",
+      "severity": "error",
+      "meaning": "A string contains an invalid escape or decoded value"
+    },
+    {
+      "code": "STK2001",
+      "severity": "error",
+      "meaning": "The declared language version is unsupported"
+    },
+    {
+      "code": "STK2002",
+      "severity": "error",
+      "meaning": "An unexpected token, declaration, property, value, or operator was found"
+    },
+    {
+      "code": "STK2003",
+      "severity": "error",
+      "meaning": "Input ended before the current construct was complete"
+    },
+    {
+      "code": "STK3001",
+      "severity": "error",
+      "meaning": "An identifier is invalid"
+    },
+    {
+      "code": "STK3002",
+      "severity": "error",
+      "meaning": "An identifier is declared more than once"
+    },
+    {
+      "code": "STK3003",
+      "severity": "error",
+      "meaning": "An edge references an unknown node"
+    },
+    {
+      "code": "STK3004",
+      "severity": "error",
+      "meaning": "A group is used as an edge endpoint"
+    },
+    {
+      "code": "STK3005",
+      "severity": "error",
+      "meaning": "An edge connects a node to itself"
+    },
+    {
+      "code": "STK3006",
+      "severity": "error",
+      "meaning": "An exact duplicate edge is declared"
+    },
+    {
+      "code": "STK3007",
+      "severity": "error",
+      "meaning": "A property occurs more than once in one block"
+    },
+    {
+      "code": "STK3008",
+      "severity": "error",
+      "meaning": "A title, label, or detail violates its text constraints"
+    },
+    {
+      "code": "STK3009",
+      "severity": "error",
+      "meaning": "A group has no descendant node"
+    },
+    {
+      "code": "STK3010",
+      "severity": "error",
+      "meaning": "Group nesting exceeds the language limit"
+    },
+    {
+      "code": "STK3011",
+      "severity": "error",
+      "meaning": "A layout reference is invalid in its scope"
+    },
+    {
+      "code": "STK3012",
+      "severity": "error",
+      "meaning": "A layout block or singleton layout statement is duplicated"
+    },
+    {
+      "code": "STK3013",
+      "severity": "error",
+      "meaning": "An icon identifier is malformed"
+    },
+    {
+      "code": "STK3014",
+      "severity": "error",
+      "meaning": "A diagram contains more than one theme statement"
+    },
+    {
+      "code": "STK4001",
+      "severity": "warning",
+      "meaning": "An order hint could not be satisfied"
+    },
+    {
+      "code": "STK4002",
+      "severity": "warning",
+      "meaning": "A node exceeds the recommended incident-edge degree"
+    },
+    {
+      "code": "STK4003",
+      "severity": "error",
+      "meaning": "A diagram exceeds a language complexity limit"
+    },
+    {
+      "code": "STK5001",
+      "severity": "warning",
+      "meaning": "An icon identifier is unavailable in the effective theme"
+    },
+    {
+      "code": "STK6001",
+      "severity": "warning",
+      "meaning": "A requested non-core theme is unavailable and `default` was used"
+    }
+  ]
+}

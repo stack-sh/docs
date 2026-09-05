@@ -1,0 +1,745 @@
+{
+  "schemaVersion": "1.0",
+  "version": "1.0.0",
+  "languageVersion": "1.0",
+  "requiredReaderFeatures": [
+    "sha256",
+    "immutable-resources"
+  ],
+  "implementations": [
+    {
+      "id": "cli",
+      "version": "0.4.0",
+      "repository": "stack-sh/cli",
+      "revision": "7f4066884f7902d4c582d45184f3a9019fe59bf7",
+      "capabilities": [
+        "check",
+        "format",
+        "render",
+        "lsp"
+      ]
+    },
+    {
+      "id": "engine",
+      "version": "0.7.0",
+      "repository": "stack-sh/engine",
+      "revision": "a1c29b7caba2dc6cd91e56a6ebec1382859d4869",
+      "capabilities": [
+        "check",
+        "format",
+        "render",
+        "completion",
+        "hover"
+      ]
+    },
+    {
+      "id": "compiler",
+      "version": "0.1.0",
+      "repository": "stack-sh/compiler",
+      "revision": "84ab5663a7f7c5b7dc0b5e9e2f04c8894ed02820",
+      "capabilities": [
+        "compile",
+        "diagnostics",
+        "completion",
+        "hover",
+        "document-symbols"
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": "INTERCHANGE.md",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/INTERCHANGE.md",
+      "sha256": "34c5a6a09abe3a753334f60cd9cca7a50c5dad1ade41faaffb1ee13a0bdec097",
+      "bytes": 10382,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "INTERCHANGE.md"
+      }
+    },
+    {
+      "id": "LANGUAGE_INTELLIGENCE.md",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/LANGUAGE_INTELLIGENCE.md",
+      "sha256": "207ac0b19af8e5b1bf8d6ba9b057048c5b733371b4ae6e86bab4b526ed785aad",
+      "bytes": 12224,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "LANGUAGE_INTELLIGENCE.md"
+      }
+    },
+    {
+      "id": "SPECIFICATION.md",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/SPECIFICATION.md",
+      "sha256": "6d76a4e28aec4ef1f2a18835ca033b7b0c5c69b549e6caed644fe130f4e53ff8",
+      "bytes": 36660,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "SPECIFICATION.md"
+      }
+    },
+    {
+      "id": "conformance/README.md",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/README.md",
+      "sha256": "5a46dbae13801aff73ea2a9e68696aae40ad037f4a03ac6c9d84e8db8b7ecdb1",
+      "bytes": 3553,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/README.md"
+      }
+    },
+    {
+      "id": "conformance/formatter/comments-and-layout/expected.ir.json",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/formatter/comments-and-layout/expected.ir.json",
+      "sha256": "d07ffadd1cd54e3007aee0a8b49313950d6f86a856b6e35cfdda7fc5ccded961",
+      "bytes": 1454,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/formatter/comments-and-layout/expected.ir.json"
+      }
+    },
+    {
+      "id": "conformance/formatter/comments-and-layout/expected.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/formatter/comments-and-layout/expected.stack",
+      "sha256": "69dc26cfc1333d7f458f8bb04611c1fea17057411966005097277e26e7b3e8ea",
+      "bytes": 599,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/formatter/comments-and-layout/expected.stack"
+      }
+    },
+    {
+      "id": "conformance/formatter/comments-and-layout/input.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/formatter/comments-and-layout/input.stack",
+      "sha256": "b7224b96067bc8e6d5c3afb07e66bf44adc12f0a47c99a366518fcd6effb7eca",
+      "bytes": 538,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/formatter/comments-and-layout/input.stack"
+      }
+    },
+    {
+      "id": "conformance/invalid/byte-order-mark/expected.diagnostics.json",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/invalid/byte-order-mark/expected.diagnostics.json",
+      "sha256": "30e3e11370f28eb2aaac2777d7183e343ec0b2de0e31273bc312302b1c2303e6",
+      "bytes": 263,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/invalid/byte-order-mark/expected.diagnostics.json"
+      }
+    },
+    {
+      "id": "conformance/invalid/byte-order-mark/source.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/invalid/byte-order-mark/source.stack",
+      "sha256": "8f7538040e38e97ca0e659a89b6ac024757f34968613dacdef34356bfcc71738",
+      "bytes": 48,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/invalid/byte-order-mark/source.stack"
+      }
+    },
+    {
+      "id": "conformance/invalid/duplicate-theme-dense-node/expected.diagnostics.json",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/invalid/duplicate-theme-dense-node/expected.diagnostics.json",
+      "sha256": "8394d1956db0b960937db8ee90b9c2e6f0e0c27e052306c26054b61282557400",
+      "bytes": 504,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/invalid/duplicate-theme-dense-node/expected.diagnostics.json"
+      }
+    },
+    {
+      "id": "conformance/invalid/duplicate-theme-dense-node/source.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/invalid/duplicate-theme-dense-node/source.stack",
+      "sha256": "167184ae7b9bd82dd66f495928b3e75ea187d7c9d5653a7f59087167d935a961",
+      "bytes": 512,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/invalid/duplicate-theme-dense-node/source.stack"
+      }
+    },
+    {
+      "id": "conformance/invalid/edge-rules/expected.diagnostics.json",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/invalid/edge-rules/expected.diagnostics.json",
+      "sha256": "21afde68cf5cef2390768dfd83122c2bd57d09612b58232d86f723fdf1f55666",
+      "bytes": 697,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/invalid/edge-rules/expected.diagnostics.json"
+      }
+    },
+    {
+      "id": "conformance/invalid/edge-rules/source.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/invalid/edge-rules/source.stack",
+      "sha256": "58f595efdb0d5b909678645088083af060eb806e173c7f826cae9daca6da05bd",
+      "bytes": 127,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/invalid/edge-rules/source.stack"
+      }
+    },
+    {
+      "id": "conformance/invalid/empty-diagram/expected.diagnostics.json",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/invalid/empty-diagram/expected.diagnostics.json",
+      "sha256": "f48b19f3aac38af879b4f978e9f20f7d7304065c5b20bea9fd62286b7d51d1ad",
+      "bytes": 266,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/invalid/empty-diagram/expected.diagnostics.json"
+      }
+    },
+    {
+      "id": "conformance/invalid/empty-diagram/source.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/invalid/empty-diagram/source.stack",
+      "sha256": "f6e76216ce9d51ff74e36902a6d5a1d31006775ab456155078371f587143239a",
+      "bytes": 29,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/invalid/empty-diagram/source.stack"
+      }
+    },
+    {
+      "id": "conformance/invalid/independent-semantic-errors/expected.diagnostics.json",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/invalid/independent-semantic-errors/expected.diagnostics.json",
+      "sha256": "6f68b3d547729146d7ac2431ca0cf6e5ec57ad2fc938d569739099f7611ffe18",
+      "bytes": 1981,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/invalid/independent-semantic-errors/expected.diagnostics.json"
+      }
+    },
+    {
+      "id": "conformance/invalid/independent-semantic-errors/source.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/invalid/independent-semantic-errors/source.stack",
+      "sha256": "36d8f56b49ac6d94bc358cde477b7cad66a5f6d157a2effbdc3fe59e1a54a8f2",
+      "bytes": 116,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/invalid/independent-semantic-errors/source.stack"
+      }
+    },
+    {
+      "id": "conformance/invalid/invalid-string-escape/expected.diagnostics.json",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/invalid/invalid-string-escape/expected.diagnostics.json",
+      "sha256": "3112ad17324bc2e305dd16a446f6ecb96e673b4ae0d828db7a62eee223f68033",
+      "bytes": 267,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/invalid/invalid-string-escape/expected.diagnostics.json"
+      }
+    },
+    {
+      "id": "conformance/invalid/invalid-string-escape/source.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/invalid/invalid-string-escape/source.stack",
+      "sha256": "e6359923f4f3b2714926e8b7aa6a00f168435876e8e26cd8bc3b30445c84d884",
+      "bytes": 47,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/invalid/invalid-string-escape/source.stack"
+      }
+    },
+    {
+      "id": "conformance/invalid/invalid-utf8/expected.diagnostics.json",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/invalid/invalid-utf8/expected.diagnostics.json",
+      "sha256": "edf46345443048f97f40402f3c3869c179c687fc6e3c06e6d9e4f1f7fa5d89cd",
+      "bytes": 265,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/invalid/invalid-utf8/expected.diagnostics.json"
+      }
+    },
+    {
+      "id": "conformance/invalid/invalid-utf8/source.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/invalid/invalid-utf8/source.stack",
+      "sha256": "14b7ba40d4dd19e10dce64ed4f9a4041ba7123b3fa22d19e211fc2ee5d6980ed",
+      "bytes": 18,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/invalid/invalid-utf8/source.stack"
+      }
+    },
+    {
+      "id": "conformance/invalid/layout-rules/expected.diagnostics.json",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/invalid/layout-rules/expected.diagnostics.json",
+      "sha256": "a72705a9100ebb0724b1063e8f98b7aa17f56ab68ac0c6bfe2df4c1e32fb179d",
+      "bytes": 921,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/invalid/layout-rules/expected.diagnostics.json"
+      }
+    },
+    {
+      "id": "conformance/invalid/layout-rules/source.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/invalid/layout-rules/source.stack",
+      "sha256": "f60985445706598c266b1d0d41f465f31734f1b413b4d7921213eb5503c776f3",
+      "bytes": 184,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/invalid/layout-rules/source.stack"
+      }
+    },
+    {
+      "id": "conformance/invalid/nested-group-icon/expected.diagnostics.json",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/invalid/nested-group-icon/expected.diagnostics.json",
+      "sha256": "22f1354a21a24b7c602b17f49a6136490e2ac1736da43b935653475848ae6d3a",
+      "bytes": 486,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/invalid/nested-group-icon/expected.diagnostics.json"
+      }
+    },
+    {
+      "id": "conformance/invalid/nested-group-icon/source.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/invalid/nested-group-icon/source.stack",
+      "sha256": "e3005827757edfd70f11a45c0c68c686ae624f28a58767fb22c983bfd952c48e",
+      "bytes": 204,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/invalid/nested-group-icon/source.stack"
+      }
+    },
+    {
+      "id": "conformance/invalid/unexpected-end/expected.diagnostics.json",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/invalid/unexpected-end/expected.diagnostics.json",
+      "sha256": "de4a0f140eb52b03a8039badc98adf15a633f502170b64242a3835e50e437304",
+      "bytes": 265,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/invalid/unexpected-end/expected.diagnostics.json"
+      }
+    },
+    {
+      "id": "conformance/invalid/unexpected-end/source.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/invalid/unexpected-end/source.stack",
+      "sha256": "a757fd3e150aece9441c16aae74ca74a3ad20580eced0e22f3c833888b0fbb1e",
+      "bytes": 50,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/invalid/unexpected-end/source.stack"
+      }
+    },
+    {
+      "id": "conformance/invalid/unexpected-token/expected.diagnostics.json",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/invalid/unexpected-token/expected.diagnostics.json",
+      "sha256": "b24dc4809425da1f096d2503adfe62e696bb832ea1cdfe20f614772ef624a2ea",
+      "bytes": 334,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/invalid/unexpected-token/expected.diagnostics.json"
+      }
+    },
+    {
+      "id": "conformance/invalid/unexpected-token/source.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/invalid/unexpected-token/source.stack",
+      "sha256": "52d6bbb3cfcb6b963d57bae214ca608fce8e5bce0ce4738a4b824c543b48b694",
+      "bytes": 54,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/invalid/unexpected-token/source.stack"
+      }
+    },
+    {
+      "id": "conformance/invalid/unknown-edge-endpoint/expected.diagnostics.json",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/invalid/unknown-edge-endpoint/expected.diagnostics.json",
+      "sha256": "63ae20580da730b2ab0b7b17670e2ee4083d1cebf46dcedbb12bd1b8e14284ae",
+      "bytes": 375,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/invalid/unknown-edge-endpoint/expected.diagnostics.json"
+      }
+    },
+    {
+      "id": "conformance/invalid/unknown-edge-endpoint/source.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/invalid/unknown-edge-endpoint/source.stack",
+      "sha256": "885a06e1d2679beeb7256b88fec9575cc0820e39d6101a21c071e92b95146cff",
+      "bytes": 105,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/invalid/unknown-edge-endpoint/source.stack"
+      }
+    },
+    {
+      "id": "conformance/invalid/unknown-layout-direction/expected.diagnostics.json",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/invalid/unknown-layout-direction/expected.diagnostics.json",
+      "sha256": "d5dd54b2358b19e5a4b3f0301a153cadfa34ea006e0cd525989aed47cfe5dd86",
+      "bytes": 304,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/invalid/unknown-layout-direction/expected.diagnostics.json"
+      }
+    },
+    {
+      "id": "conformance/invalid/unknown-layout-direction/source.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/invalid/unknown-layout-direction/source.stack",
+      "sha256": "f37596e202223e5ce47b7ef4cb66d9e524cdafbdeb1c92e614967d343df968f8",
+      "bytes": 76,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/invalid/unknown-layout-direction/source.stack"
+      }
+    },
+    {
+      "id": "conformance/language-intelligence/format/fixture.json",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/language-intelligence/format/fixture.json",
+      "sha256": "5f8430d9900b8f4537a0f25006348ca8d782ddf80132637acdca048b39f3d3c1",
+      "bytes": 784,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/language-intelligence/format/fixture.json"
+      }
+    },
+    {
+      "id": "conformance/language-intelligence/format/source.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/language-intelligence/format/source.stack",
+      "sha256": "db381aaea0f0aedb64d7e88ee1359b5d0d256a976102c6f6072ab7bad2f5dea3",
+      "bytes": 57,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/language-intelligence/format/source.stack"
+      }
+    },
+    {
+      "id": "conformance/language-intelligence/partial/fixture.json",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/language-intelligence/partial/fixture.json",
+      "sha256": "4516d5b40b6f86c87806d8ff4fafe6c590d0ba3030df10db122db82e8d2f592a",
+      "bytes": 2406,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/language-intelligence/partial/fixture.json"
+      }
+    },
+    {
+      "id": "conformance/language-intelligence/partial/source.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/language-intelligence/partial/source.stack",
+      "sha256": "4880e629ee875ff319f2517248dc9dbd95e0166ccdd026ed70549d956ee24813",
+      "bytes": 57,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/language-intelligence/partial/source.stack"
+      }
+    },
+    {
+      "id": "conformance/language-intelligence/semantic/fixture.json",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/language-intelligence/semantic/fixture.json",
+      "sha256": "7ea1cc7e7ea729e5fb9c6fac671c64fc1a80b95b451e256b11481cb9317117c5",
+      "bytes": 8518,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/language-intelligence/semantic/fixture.json"
+      }
+    },
+    {
+      "id": "conformance/language-intelligence/semantic/source.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/language-intelligence/semantic/source.stack",
+      "sha256": "ff32652ca5cfdb3e69352b2701bb75bbbeede4bea0f7978d225bcd8bd1d7bfb2",
+      "bytes": 240,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/language-intelligence/semantic/source.stack"
+      }
+    },
+    {
+      "id": "conformance/valid/complete-semantics/expected.ir.json",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/valid/complete-semantics/expected.ir.json",
+      "sha256": "3f1f5572966d307388b2f22b9dcd10a022df25bd4b1039e3afdb1913165a7981",
+      "bytes": 4489,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/valid/complete-semantics/expected.ir.json"
+      }
+    },
+    {
+      "id": "conformance/valid/complete-semantics/source.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/valid/complete-semantics/source.stack",
+      "sha256": "11ec422ef2517ef55a0d232e04672ca44a955d1c8ce6074ece6852c834992f0c",
+      "bytes": 1365,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/valid/complete-semantics/source.stack"
+      }
+    },
+    {
+      "id": "conformance/valid/default-normalization/expected.ir.json",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/valid/default-normalization/expected.ir.json",
+      "sha256": "e6716d42502e2ab0017b61ed047a95bbdc651c90fdd92e4027c9394a63fba014",
+      "bytes": 773,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/valid/default-normalization/expected.ir.json"
+      }
+    },
+    {
+      "id": "conformance/valid/default-normalization/source.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/valid/default-normalization/source.stack",
+      "sha256": "63c630ca5c360c7e9904ca412d7e355cb4145222683975fcbc67d60c0ff652ad",
+      "bytes": 103,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/valid/default-normalization/source.stack"
+      }
+    },
+    {
+      "id": "conformance/valid/provider-icon-namespace/expected.ir.json",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/valid/provider-icon-namespace/expected.ir.json",
+      "sha256": "314a20e7eddea98fdf0de6bc012abc871ba8eedf03fc3760d948595b163292f9",
+      "bytes": 456,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/valid/provider-icon-namespace/expected.ir.json"
+      }
+    },
+    {
+      "id": "conformance/valid/provider-icon-namespace/source.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/conformance/valid/provider-icon-namespace/source.stack",
+      "sha256": "5280e48bc7d3537701d9459e6a556cbaec1b0f57c9bc9d76674630e0e57c10dc",
+      "bytes": 116,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "conformance/valid/provider-icon-namespace/source.stack"
+      }
+    },
+    {
+      "id": "examples/01-minimal.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/examples/01-minimal.stack",
+      "sha256": "c0d1ae9bd127c4f039e633add0ee51c3ede7b0b7952318e617e9550b6b884b22",
+      "bytes": 93,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "examples/01-minimal.stack"
+      }
+    },
+    {
+      "id": "examples/02-node-semantics.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/examples/02-node-semantics.stack",
+      "sha256": "c07d2a03f7d296306b25c7f5e37e3cd079b83abba50be421aa9956ffcd4e020e",
+      "bytes": 307,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "examples/02-node-semantics.stack"
+      }
+    },
+    {
+      "id": "examples/03-groups-and-layout.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/examples/03-groups-and-layout.stack",
+      "sha256": "54475a71adb3407e75fd460415d3cd093cee466bbb67c3a92224ca34e676b57e",
+      "bytes": 757,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "examples/03-groups-and-layout.stack"
+      }
+    },
+    {
+      "id": "examples/04-commerce-platform.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/examples/04-commerce-platform.stack",
+      "sha256": "297746969f28d4275d52e9e27d76327bfa1c8db2c161856d9cdad00a6cdc7d34",
+      "bytes": 2074,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "examples/04-commerce-platform.stack"
+      }
+    },
+    {
+      "id": "examples/05-aws-serverless.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/examples/05-aws-serverless.stack",
+      "sha256": "22b7a750a7a8712d8ff6cae6b93849db3838efcbb5eb96c2fe4906df8029bb4f",
+      "bytes": 1261,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "examples/05-aws-serverless.stack"
+      }
+    },
+    {
+      "id": "examples/06-gcp-data-service.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/examples/06-gcp-data-service.stack",
+      "sha256": "320bec6f9aac23cafd8c93eb3512be1a2fb0c93b103d295a0a8ddba41ec8c62c",
+      "bytes": 902,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "examples/06-gcp-data-service.stack"
+      }
+    },
+    {
+      "id": "examples/07-azure-event-platform.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/examples/07-azure-event-platform.stack",
+      "sha256": "f8552fab5e42038c6363ba0ecd59e5d005abbe21247664881987e8673598c532",
+      "bytes": 1306,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "examples/07-azure-event-platform.stack"
+      }
+    },
+    {
+      "id": "examples/08-github-delivery.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/examples/08-github-delivery.stack",
+      "sha256": "01cc2af5508c3f34618d9ac814c640a9bfe6d6f0c313ecca8bad7f0e47ffcfcb",
+      "bytes": 810,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "examples/08-github-delivery.stack"
+      }
+    },
+    {
+      "id": "examples/09-mixed-provider-platform.stack",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/examples/09-mixed-provider-platform.stack",
+      "sha256": "6363300892d680d3807abe61899ad3b2125875261c8da25cf650b4db92133ac3",
+      "bytes": 1404,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "examples/09-mixed-provider-platform.stack"
+      }
+    },
+    {
+      "id": "examples/catalog.json",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/examples/catalog.json",
+      "sha256": "6194d0f7403443101e933b42f65f90eb4a30778743f285683b4dd957d61a0a65",
+      "bytes": 7475,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "examples/catalog.json"
+      }
+    },
+    {
+      "id": "packages/language/grammars/stack.tmLanguage.json",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/packages/language/grammars/stack.tmLanguage.json",
+      "sha256": "abe19f7db0039b43a78a53c324f19251a29d2202b76b069acc2218cd8ccb5d3d",
+      "bytes": 2788,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "packages/language/grammars/stack.tmLanguage.json"
+      }
+    },
+    {
+      "id": "schemas/diagnostic-expectations.schema.json",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/schemas/diagnostic-expectations.schema.json",
+      "sha256": "1a8aba3a9ebc351cf84d549139c08bbfb46eeeb96b9657c4d4d9d7d302954482",
+      "bytes": 1721,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "schemas/diagnostic-expectations.schema.json"
+      }
+    },
+    {
+      "id": "schemas/diagnostic.schema.json",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/schemas/diagnostic.schema.json",
+      "sha256": "e7437c27d42e8cd4dd5ddce5f507563b6d5e0419c254fc62fcd00ede08c59697",
+      "bytes": 2115,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "schemas/diagnostic.schema.json"
+      }
+    },
+    {
+      "id": "schemas/example-catalog.schema.json",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/schemas/example-catalog.schema.json",
+      "sha256": "d71d91e78ec0cc45e9c818b609f647124daeb7391f8f8ddebcd09e60a26802e9",
+      "bytes": 3255,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "schemas/example-catalog.schema.json"
+      }
+    },
+    {
+      "id": "schemas/language-intelligence-fixture.schema.json",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/schemas/language-intelligence-fixture.schema.json",
+      "sha256": "b9ea2fe701aead3540bd4184377620fe87f98ee88fa2faadd93559a4f95aeb84",
+      "bytes": 907,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "schemas/language-intelligence-fixture.schema.json"
+      }
+    },
+    {
+      "id": "schemas/language-intelligence.schema.json",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/schemas/language-intelligence.schema.json",
+      "sha256": "7b93ae37d7e91e91affe10375c7099f2d25f2c055906e553d80b7e5c45156391",
+      "bytes": 9726,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "schemas/language-intelligence.schema.json"
+      }
+    },
+    {
+      "id": "schemas/normalized-ir.schema.json",
+      "url": "https://raw.githubusercontent.com/stack-sh/specification/0545936ecaebe77b9309bacd0447b8073a1d0701/schemas/normalized-ir.schema.json",
+      "sha256": "a7b857ecbf78bfb0aa2efca299242107470ea5f938a33bb8735a5b9f4bf0fab4",
+      "bytes": 5760,
+      "source": {
+        "repository": "stack-sh/specification",
+        "revision": "0545936ecaebe77b9309bacd0447b8073a1d0701",
+        "path": "schemas/normalized-ir.schema.json"
+      }
+    },
+    {
+      "id": "diagnostic-catalog",
+      "url": "https://stack-diagram.com/machine/v1.0.0/diagnostics.json",
+      "sha256": "2c6303b773800a12d985119b69c65af7946de7eb9907f2f4d6fc3d903751d4b8",
+      "bytes": 3418
+    },
+    {
+      "id": "manifest-schema",
+      "url": "https://stack-diagram.com/machine/v1.0.0/manifest.schema.json",
+      "sha256": "48ffe1874039164aaa5306732372b32c73160b899d6d8a063540491468a78255",
+      "bytes": 3075
+    }
+  ]
+}

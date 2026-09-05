@@ -14,7 +14,7 @@ export function compareConsumer(expected, actual, kind) {
   assert.deepEqual(actual.cli, expected.cli, `${kind}: published CLI identity is stale`);
   const select = manifest => {
     assert.ok(Array.isArray(manifest.files));
-    const files = manifest.files.filter(file => kind === 'cli' ? file.path === skillPath : file.path.startsWith('site/') || file.path === skillPath);
+    const files = manifest.files.filter(file => kind === 'cli' ? file.path === skillPath : file.path.startsWith('site/') || file.path.startsWith('machine/') || file.path === skillPath);
     assert.ok(files.length > 0);
     const sorted = files.map(file => {
       assert.match(file.sha256, /^[a-f0-9]{64}$/);
