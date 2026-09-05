@@ -5,6 +5,7 @@
   "type": "module",
   "license": "Apache-2.0",
   "scripts": {
+    "consumers:check": "node scripts/consumer-freshness.mjs",
     "release:check": "node scripts/cli-release.mjs",
     "release:sync": "node scripts/cli-release.mjs --sync",
     "generate": "node scripts/generate.mjs",
