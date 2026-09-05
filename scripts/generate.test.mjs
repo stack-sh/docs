@@ -42,6 +42,21 @@ test('release lock updates all rendered version references', async t => {
   }
 });
 
+test('canonical story changes reach the home and introduction without duplicating copy', async t => {
+  const directory = await fixture(t);
+  const storyPath = path.join(directory, 'content/product-story.json');
+  const story = JSON.parse(await readFile(storyPath, 'utf8'));
+  story.features[0].title = 'Updated canonical benefit';
+  story.hero.tagline = 'A revised tagline.';
+  await writeFile(storyPath, JSON.stringify(story));
+  const outputs = await generate(directory);
+  assert.ok(outputs['site/index.md'].includes('A revised tagline.'));
+  assert.ok(outputs['site/index.md'].includes('Updated canonical benefit'));
+  assert.ok(outputs['site/guide/what-is-stack.md'].includes('Updated canonical benefit'));
+  for (const locale of ['ja', 'zh', 'ko']) assert.ok(!outputs[`site/${locale}/index.md`].includes('Updated canonical benefit'));
+  await generate(directory, true);
+});
+
 test('check rejects modified, missing, and unexpected generated files', async t => {
   const directory = await fixture(t);
   await generate(directory);
@@ -74,6 +89,10 @@ test('all four locales expose the same page set and shared copyable instruction'
     for (const page of englishPages) assert.ok(outputs[`site/${locale}${page}`], `Missing ${locale}${page}`);
     assert.ok(outputs[`site/${locale}guide/coding-agents.md`].includes(prompt));
     assert.equal(outputs[`site/${locale}guide/agent-workflow.md`].replace(/^\$ /gm, ''), outputs['guide/agent-workflow.md']);
+    const gettingStarted = outputs[`site/${locale}guide/getting-started.md`];
+    for (const destination of ['./coding-agents', '../examples/', './provider-icons', '../language/syntax', '../reference/diagnostics-and-limits', 'https://github.com/stack-sh/cli/blob/main/docs/configuration.md']) {
+      assert.ok(gettingStarted.includes(`](${destination})`), `Missing next step: ${locale}${destination}`);
+    }
   }
   assert.equal(Object.keys(outputs).filter(file => file.startsWith('site/')).length, 60);
 });

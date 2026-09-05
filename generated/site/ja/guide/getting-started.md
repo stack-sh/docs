@@ -124,7 +124,7 @@ $ stack fmt --check diagram.stack
 
 ## 最初のdocumentを書く
 
-Editorを次のexampleへ置き換えます。
+ブラウザで試す場合は[Playground](https://stack-diagram.com/)を開き、エディタを次の作例に置き換えます。CLIの場合は同じソースを`diagram.stack`として保存し、上の検証・描画コマンドを実行できます。
 
 ```stack
 stack 1.0
@@ -196,10 +196,10 @@ Sourceは4つの要素で構成されています。
 
 ## 次に読むもの
 
-- Lexical ruleと完全なgrammarは[Documentとsyntax](../language/syntax)を参照します。
-- Componentとboundaryは[Nodeとgroup](../language/nodes-and-groups)を参照します。
-- Relationshipと配置intentは[Edgeとlayout](../language/edges-and-layout)を参照します。
-- Visual systemや明示iconを選ぶ前に[Themeとicon](../language/themes-and-icons)を参照します。
+- **Coding agentと書く:** 任意の[Stackスキル](./coding-agents)を導入し、共通の検証・描画手順を使います。
+- **作例から始める:** [実行時に描画される作例](../examples/)をPlaygroundで開き、[テーマとアイコン](../language/themes-and-icons)を試します。
+- **自分の環境に合わせる:** [プロバイダーアイコンを取り込み](./provider-icons)、[CLI設定ガイド](https://github.com/stack-sh/cli/blob/main/docs/configuration.md)で保存先を選びます。この設定はCLI用です。ブラウザではローカルのパックを明示的に読み込みます。
+- **詳しく調べる:** [言語リファレンス](../language/syntax)と[診断・制限](../reference/diagnostics-and-limits)を参照しながら、より大きなシステムを記述します。
 
 ## 更新・アンインストール
 

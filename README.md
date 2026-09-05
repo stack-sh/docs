@@ -20,6 +20,15 @@ coding-agent guides explain this and share one copyable prompt from
 `content/agent-prompt.txt`. This avoids hand-maintaining the validation workflow
 both in a guide and a skill. `{{cliVersion}}` comes from the release lock.
 
+The English product story lives in `content/product-story.json`; Japanese,
+Chinese, and Korean UI copy lives in `content/product-story-locales.json`, keyed
+by the canonical benefit IDs. `{{productHome}}` generates homepage metadata and
+`{{productBenefits}}` generates the introduction's benefit list. Update those
+sources rather than copying marketing text into page templates. The homepage
+has only `hero.name` as its H1, a separate tagline, and a `description` field
+for page metadata and the website's supporting hero paragraph. The website
+owns rendering that paragraph; no example SVG is generated here.
+
 `generated/site/` contains complete Markdown inputs for the website. Website
 presentation, images, VitePress configuration, and deployment are not owned here.
 

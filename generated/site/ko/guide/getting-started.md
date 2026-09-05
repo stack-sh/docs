@@ -124,7 +124,7 @@ $ stack fmt --check diagram.stack
 
 ## 첫 문서 작성
 
-에디터 내용을 다음 예제로 바꿉니다.
+브라우저에서 체험하려면 [Playground](https://stack-diagram.com/)를 열고 에디터 내용을 다음 예제로 바꾸세요. CLI 사용자는 같은 소스를 `diagram.stack`으로 저장한 뒤 위의 검사·렌더링 명령을 다시 실행할 수 있습니다.
 
 ```stack
 stack 1.0
@@ -196,10 +196,10 @@ diagram "Checkout" {
 
 ## 다음으로 읽을 내용
 
-- 어휘 규칙과 전체 문법은 [문서와 문법](../language/syntax)을 참고하세요.
-- 컴포넌트와 경계는 [노드와 그룹](../language/nodes-and-groups)을 참고하세요.
-- 관계와 배치 의도는 [엣지와 레이아웃](../language/edges-and-layout)을 참고하세요.
-- 시각 시스템이나 명시적 아이콘을 고르기 전에 [테마와 아이콘](../language/themes-and-icons)을 읽으세요.
+- **코딩 에이전트와 작성하기:** 선택 사항인 [Stack 스킬](./coding-agents)을 설치하고 공통 검사·렌더링 흐름을 사용하세요.
+- **예제에서 시작하기:** [실시간 렌더링 예제](../examples/)를 Playground에서 열고 [테마와 아이콘](../language/themes-and-icons)을 살펴보세요.
+- **내 환경에 맞추기:** [공급자 아이콘을 가져온](./provider-icons) 다음 [CLI 설정 가이드](https://github.com/stack-sh/cli/blob/main/docs/configuration.md)에서 로컬 저장소를 선택하세요. 이 설정은 CLI용이며, 브라우저에서는 로컬 팩을 명시적으로 가져옵니다.
+- **세부 사항 찾아보기:** 더 큰 시스템을 모델링할 때 [언어 레퍼런스](../language/syntax)와 [진단과 제한](../reference/diagnostics-and-limits)을 참고하세요.
 
 ## 업데이트 또는 제거
 

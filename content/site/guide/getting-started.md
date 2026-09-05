@@ -124,7 +124,7 @@ $ stack fmt --check diagram.stack
 
 ## Write your first document
 
-Replace the editor content with this example:
+For the browser path, open the [Playground](https://stack-diagram.com/) and replace its editor content with this example. CLI users can save the same source as `diagram.stack` and repeat the check/render commands above:
 
 ```stack
 stack 1.0
@@ -196,10 +196,10 @@ If Stack finds a problem, the diagnostic shows its severity, stable code, locati
 
 ## Choose what to learn next
 
-- Read [Document and syntax](../language/syntax) for lexical rules and the complete grammar.
-- Read [Nodes and groups](../language/nodes-and-groups) to model components and boundaries.
-- Read [Edges and layout](../language/edges-and-layout) for relationships and placement intent.
-- Read [Themes and icons](../language/themes-and-icons) before selecting a visual system or explicit icon.
+- **Write with your coding agent:** install the optional [Stack skill](./coding-agents) and use the shared check/render workflow.
+- **Find a starting point:** open a [live example](../examples/) in the Playground, then explore [themes and icons](../language/themes-and-icons).
+- **Use your own setup:** [import provider icons](./provider-icons), then choose their local store through the [CLI configuration guide](https://github.com/stack-sh/cli/blob/main/docs/configuration.md). Configuration is a CLI contract; the browser uses explicit local pack import.
+- **Look up the details:** use the [language reference](../language/syntax) and [diagnostics and limits](../reference/diagnostics-and-limits) as you model a larger system.
 
 ## Update or uninstall
 
