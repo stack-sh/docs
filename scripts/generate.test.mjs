@@ -21,7 +21,7 @@ test('one shared instruction change updates skill and guide with deterministic o
   const source = await readFile(sourcePath, 'utf8');
   await writeFile(sourcePath, source + '\nKeep the existing diagram title.\n');
   const after = await generate(directory);
-  for (const file of ['skills/stack-diagrams/SKILL.md', 'guide/agent-workflow.md']) {
+  for (const file of ['skills/stack-diagrams/SKILL.md', 'guide/agent-workflow.md', ...['', 'ja/', 'zh/', 'ko/'].map(locale => `site/${locale}guide/agent-workflow.md`)]) {
     assert.notEqual(before[file], after[file]);
     assert.ok(after[file].includes('Keep the existing diagram title.'));
   }
@@ -36,7 +36,7 @@ test('release lock updates all rendered version references', async t => {
   release.version = '9.8.7';
   await writeFile(releasePath, JSON.stringify(release));
   const outputs = await generate(directory);
-  for (const file of ['skills/stack-diagrams/SKILL.md', 'guide/agent-workflow.md']) {
+  for (const file of ['skills/stack-diagrams/SKILL.md', 'guide/agent-workflow.md', ...['', 'ja/', 'zh/', 'ko/'].map(locale => `site/${locale}guide/getting-started.md`)]) {
     assert.ok(outputs[file].includes('9.8.7'));
     assert.ok(!outputs[file].includes('0.4.0'));
   }
@@ -61,4 +61,19 @@ test('unknown tokens and mutable provider revisions fail closed', () => {
   const release = { repository: 'stack-sh/cli', revision: 'a'.repeat(40), version: '0.4.0' };
   assert.throws(() => renderGuidance('{{missing}}', metadata, release), /Unknown template token/);
   assert.throws(() => renderGuidance('content', metadata, { ...release, revision: 'main' }));
+});
+
+test('all four locales expose the same page set and shared copyable instruction', async t => {
+  const directory = await fixture(t);
+  const outputs = await generate(directory);
+  const locales = ['', 'ja/', 'zh/', 'ko/'];
+  const englishPages = Object.keys(outputs).filter(file => file.startsWith('site/') && !/^site\/(ja|zh|ko)\//.test(file)).map(file => file.slice(5)).sort();
+  assert.equal(englishPages.length, 15);
+  const prompt = (await readFile(path.join(directory, 'content/agent-prompt.txt'), 'utf8')).trimEnd();
+  for (const locale of locales) {
+    for (const page of englishPages) assert.ok(outputs[`site/${locale}${page}`], `Missing ${locale}${page}`);
+    assert.ok(outputs[`site/${locale}guide/coding-agents.md`].includes(prompt));
+    assert.equal(outputs[`site/${locale}guide/agent-workflow.md`], outputs['guide/agent-workflow.md']);
+  }
+  assert.equal(Object.keys(outputs).filter(file => file.startsWith('site/')).length, 60);
 });
