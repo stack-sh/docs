@@ -1,0 +1,13 @@
+{
+  "name": "@stack-sh/docs",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "Apache-2.0",
+  "scripts": {
+    "generate": "node scripts/generate.mjs",
+    "check": "node scripts/generate.mjs --check",
+    "test": "node --test scripts/*.test.mjs",
+    "smoke": "node scripts/smoke-skill.mjs"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0",
+  "cli": {
+    "repository": "stack-sh/cli",
+    "revision": "7f4066884f7902d4c582d45184f3a9019fe59bf7",
+    "version": "0.4.0"
+  },
+  "files": [
+    {
+      "path": "skills/stack-diagrams/SKILL.md",
+      "sha256": "a7f39a9d3da0f7074ea348bebb0260a642f202ee5f2026742c08972f75c7f2a6"
+    },
+    {
+      "path": "guide/agent-workflow.md",
+      "sha256": "66fe4c3c97afad3a740d9ab824c5aae3f43783bfa251fe0347666b38bc3afc9b"
+    }
+  ]
+}
