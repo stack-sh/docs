@@ -24,7 +24,7 @@
     },
     {
       "path": "site/guide/getting-started.md",
-      "sha256": "a6001affc631efa8e52c37b80eee3d4228f255c934e6564266e7ae613bae9322"
+      "sha256": "d1ecf1c7bb8c6044ea0235b85cb4f982b4150e942eb7c93e7314eb66df8ab92b"
     },
     {
       "path": "site/guide/playground.md",
@@ -52,7 +52,7 @@
     },
     {
       "path": "site/ja/guide/getting-started.md",
-      "sha256": "10838a254fce97b88a304bd1cdf8940c3f3522fdecb37428cea36cee0b35e978"
+      "sha256": "28bdbb9838e2f181d2f19b21f9fdab7d440b70aadd72f9e3064243fe23991758"
     },
     {
       "path": "site/ja/guide/playground.md",
@@ -108,7 +108,7 @@
     },
     {
       "path": "site/ko/guide/getting-started.md",
-      "sha256": "e8c3980411457ed25973fe2075c6d58f22d9c5b17aeadfaecd73d9d4e91f257f"
+      "sha256": "5b0b398c0e62ed9c7f53f685e42facd4de71cc3a362c8c359b6284b26771b432"
     },
     {
       "path": "site/ko/guide/playground.md",
@@ -192,7 +192,7 @@
     },
     {
       "path": "site/zh/guide/getting-started.md",
-      "sha256": "0741c92878eeff3b378f229f99ebadcb98689d13f6458644e4523e6b46cf923b"
+      "sha256": "f229319cf56bca7b5489b7fcf8a1cd058dfe586acf691714a5e1a69e6d63b46c"
     },
     {
       "path": "site/zh/guide/playground.md",

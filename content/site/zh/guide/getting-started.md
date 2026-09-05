@@ -24,7 +24,7 @@ cargo install stack-diagram-cli --version {{cliVersion}} --locked
 
 ### Aqua
 
-在Git仓库中，将以下内容保存为`aqua.yaml`：
+在Git仓库的根目录（包含`.git`的目录）中，将以下内容保存为`aqua.yaml`。新项目请先运行`git init`：
 
 ```yaml
 checksum:

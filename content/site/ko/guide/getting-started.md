@@ -24,7 +24,7 @@ cargo install stack-diagram-cli --version {{cliVersion}} --locked
 
 ### Aqua
 
-Git 저장소에서 다음 내용을 `aqua.yaml`로 저장하세요.
+Git 저장소의 루트(`.git`이 있는 디렉터리)에 다음 내용을 `aqua.yaml`로 저장하세요. 새 프로젝트라면 먼저 `git init`을 실행하세요.
 
 ```yaml
 checksum:

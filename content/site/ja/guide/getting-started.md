@@ -24,7 +24,7 @@ cargo install stack-diagram-cli --version {{cliVersion}} --locked
 
 ### Aqua
 
-Gitリポジトリ内に、次の内容を`aqua.yaml`として保存します。
+Gitリポジトリのルート（`.git`があるディレクトリ）に、次の内容を`aqua.yaml`として保存します。新しいプロジェクトでは先に`git init`を実行してください。
 
 ```yaml
 checksum:

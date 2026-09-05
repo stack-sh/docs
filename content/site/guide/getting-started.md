@@ -24,7 +24,7 @@ cargo install stack-diagram-cli --version {{cliVersion}} --locked
 
 ### Aqua
 
-In a Git repository, save the following as `aqua.yaml`:
+At the root of a Git repository (the directory containing `.git`), save the following as `aqua.yaml`. If this is a new project, run `git init` first:
 
 ```yaml
 checksum:
