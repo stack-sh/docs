@@ -104,7 +104,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 ## 첫 SVG 만들기
 
-새로운 빈 작업 디렉터리에서 실행하세요.
+새로운 빈 작업 디렉터리에서 실행하세요. Aqua를 사용한다면 `aqua.yaml`이 있는 Git 저장소 안에 디렉터리를 만드세요.
 
 ```sh
 $ stack --version

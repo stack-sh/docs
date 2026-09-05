@@ -104,7 +104,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 ## 生成第一个SVG
 
-在新的空工作目录中执行：
+在新的空工作目录中执行。使用Aqua时，请将该目录放在包含`aqua.yaml`的Git仓库内：
 
 ```sh
 $ stack --version

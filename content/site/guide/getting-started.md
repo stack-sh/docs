@@ -104,7 +104,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 ## Create your first SVG
 
-In a new empty working directory, run:
+In a new empty working directory, run the following. With Aqua, keep this directory inside the Git repository containing your `aqua.yaml`:
 
 ```sh
 $ stack --version

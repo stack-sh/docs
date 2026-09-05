@@ -104,7 +104,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 ## 最初のSVGを作る
 
-新しい空の作業ディレクトリで実行します。
+新しい空の作業ディレクトリで実行します。Aquaを使う場合は、`aqua.yaml`があるGitリポジトリの内側に作ってください。
 
 ```sh
 $ stack --version
