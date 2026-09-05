@@ -4,6 +4,9 @@ Canonical user documentation and generated agent guidance for Stack architecture
 
 ## Ownership
 
+See [machine resource distribution](./MACHINE_RESOURCES.md) for the versioned
+schema, grammar, diagnostics, examples, capability manifest, and consumer example.
+
 Edit the shared agent workflow in `content/agent-workflow.md`. Both the installable
 skill and the human-readable workflow are generated from this one source. Skill
 discovery metadata lives in `content/skill-metadata.json`, and published CLI

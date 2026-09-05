@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto';
 import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { generateMachineResources } from './machine-resources.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 
@@ -60,6 +61,7 @@ export async function generate(directory = root, check = false) {
       outputs[`site/${locale}guide/agent-workflow.md`] = outputs['guide/agent-workflow.md'].replace(/```sh\n([\s\S]*?)```/g, (_, commands) => '```sh\n' + commands.trimEnd().split('\n').map(line => '$ ' + line).join('\n') + '\n```');
     }
   }
+  if ((await filePaths(path.join(directory, 'content'))).includes('machine-resources-v1.json')) Object.assign(outputs, await generateMachineResources(directory));
   const manifest = {
     schemaVersion: '1.0',
     cli: release,

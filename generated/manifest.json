@@ -253,6 +253,22 @@
     {
       "path": "site/ko/guide/agent-workflow.md",
       "sha256": "35d435082b86b48fa4b456262d7eb219e622221ae0906dca6dbe9a6619d02ef9"
+    },
+    {
+      "path": "machine/v1.0.0/manifest.json",
+      "sha256": "cae7ef36ef39362954ca34dffafbef8ddb9cd0cc0034765643797cff1069446f"
+    },
+    {
+      "path": "machine/v1.0.0/manifest.schema.json",
+      "sha256": "48ffe1874039164aaa5306732372b32c73160b899d6d8a063540491468a78255"
+    },
+    {
+      "path": "machine/v1.0.0/diagnostics.json",
+      "sha256": "2c6303b773800a12d985119b69c65af7946de7eb9907f2f4d6fc3d903751d4b8"
+    },
+    {
+      "path": "machine/index.json",
+      "sha256": "39e14071f27135e6904970844780f33b778d5a18f5bb8cf36a8a6357a8e00f3d"
     }
   ]
 }

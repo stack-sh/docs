@@ -13,17 +13,51 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v7
         with:
           node-version: 22.14.0
       - name: Check whitespace
         run: git diff --check "$(git hash-object -t tree /dev/null)" HEAD
+      - name: Install validation dependencies
+        run: npm ci --ignore-scripts --no-audit
       - name: Check generator syntax
         run: node --check scripts/generate.mjs
       - name: Test shared-source generation and drift rejection
         run: npm test
       - name: Verify committed generated content
         run: npm run check
+      - name: Preserve published immutable machine resources
+        env:
+          MACHINE_BASE_REVISION: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: node scripts/check-machine-immutability.mjs
+      - name: Verify machine resource integrity and actual WASM behavior
+        run: npm run machine:check
+      - name: Read native conformance pins
+        id: native
+        run: |
+          node --input-type=module -e 'import fs from "node:fs"; const p=JSON.parse(fs.readFileSync("content/machine-resources-v1.json")); console.log(`compiler=${p.compilerRevision}\nspecification=${p.specificationRevision}`)' >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v7
+        with:
+          repository: stack-sh/compiler
+          ref: ${{ steps.native.outputs.compiler }}
+          path: .stack-compiler
+          persist-credentials: false
+      - uses: actions/checkout@v7
+        with:
+          repository: stack-sh/specification
+          ref: ${{ steps.native.outputs.specification }}
+          path: .stack-specification
+          persist-credentials: false
+      - name: Verify native compiler IR and language intelligence conformance
+        env:
+          STACK_SPECIFICATION_DIR: ${{ github.workspace }}/.stack-specification
+        run: |
+          rustup toolchain install stable --profile minimal
+          cargo +stable test --manifest-path .stack-compiler/Cargo.toml --locked --features conformance --test conformance --test language_intelligence_conformance
+      - name: Run a resource consumer against local discovery and immutable upstream URLs
+        run: node examples/read-machine-resources.mjs --local
       - name: Check published CLI freshness
         run: npm run release:check
         env:

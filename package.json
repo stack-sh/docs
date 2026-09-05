@@ -5,6 +5,7 @@
   "type": "module",
   "license": "Apache-2.0",
   "scripts": {
+    "machine:check": "node scripts/validate-machine-resources.mjs",
     "consumers:check": "node scripts/consumer-freshness.mjs",
     "release:check": "node scripts/cli-release.mjs",
     "release:sync": "node scripts/cli-release.mjs --sync",
@@ -12,5 +13,9 @@
     "check": "node scripts/generate.mjs --check",
     "test": "node --test scripts/*.test.mjs",
     "smoke": "node scripts/smoke-skill.mjs"
+  },
+  "devDependencies": {
+    "@stack-sh/engine": "0.7.0",
+    "ajv": "8.20.0"
   }
 }
