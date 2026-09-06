@@ -122,6 +122,33 @@ $ stack fmt diagram.stack
 $ stack fmt --check diagram.stack
 ```
 
+## 설치 상태 확인 및 셸 연동 설정
+
+프로젝트나coding agent workflow에서 Stack을 계속 사용하기 전에 다음 두 read-only 명령으로 설치 상태를 확인하세요.
+
+```text
+$ stack doctor
+$ stack config path
+```
+
+`stack doctor`는 CLI 버전, 선택된 설정 경로, 설정 상태, 실제 icon store 경로, 설치된 알려진 provider pack을 보고합니다. 기본 설정이나icon store가 없는 상태는 정상입니다. 명시적으로 설정한 경로가 잘못되었거나 읽을 수 없으면 수정 방법을 표시하고 상태 코드 `2`로 종료합니다. `stack config path`는 설정을 만들거나 읽지 않고 선택될 `config.yaml` 경로만 출력합니다.
+
+Homebrew는binary와 일치하는 자동 완성 및manual 파일을 자동으로 설치합니다. 직접 다운로드, Aqua, Cargo 사용자는 자신의 셸에 맞춰 동일하고 결정적인 파일을 생성할 수 있습니다.
+
+```text
+$ stack completions bash
+$ stack completions zsh
+$ stack completions fish
+$ stack manpage
+```
+
+이 명령은 표준 출력에만 쓰며 셸 시작 파일을 수정하지 않습니다. [셸 연동 가이드](https://github.com/stack-sh/cli/blob/main/docs/completions.md)에 따라 사용자 소유의 자동 완성 또는manual 디렉터리에 출력을 저장하세요. 설치하지 않고offline manual을 읽을 수도 있습니다.
+
+```text
+$ stack manpage > stack.1
+$ man ./stack.1
+```
+
 ## 첫 문서 작성
 
 브라우저에서 체험하려면 [Playground](https://stack-diagram.com/)를 열고 에디터 내용을 다음 예제로 바꾸세요. CLI 사용자는 같은 소스를 `diagram.stack`으로 저장한 뒤 위의 검사·렌더링 명령을 다시 실행할 수 있습니다.
@@ -212,4 +239,4 @@ Stack은 스스로 업데이트하지 않습니다. 바이너리를 설치한 �
 | Aqua | `aqua update`, `aqua update-checksum`, `aqua install` | 이 설정이 있는 상태에서 `aqua rm -m pl stack-sh,stack-sh/cli`를 실행하고 `aqua.yaml`에서 `stack-sh/cli`를 제거하세요. 다른 프로젝트에서 필요하면 다시 설치될 수 있습니다. |
 | 직접 다운로드 | 새release를 검증한 뒤 직접 설치한 바이너리만 교체하세요. | 직접 설치한 바이너리(`~/.local/bin/stack`)만 제거하세요. |
 
-자동 완성, man 페이지, 복구 절차는 [셸 통합](https://github.com/stack-sh/cli/blob/main/docs/completions.md), [안전한 업데이트](https://github.com/stack-sh/cli/blob/main/docs/self-update.md), [공급망 검증](https://github.com/stack-sh/cli/blob/main/docs/supply-chain.md)을 참고하세요.
+업데이트 복구와artifact 검증은 [안전한 업데이트](https://github.com/stack-sh/cli/blob/main/docs/self-update.md)와 [공급망 검증](https://github.com/stack-sh/cli/blob/main/docs/supply-chain.md)을 참고하세요.

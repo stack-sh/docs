@@ -122,6 +122,33 @@ $ stack fmt diagram.stack
 $ stack fmt --check diagram.stack
 ```
 
+## 導入状態を確認し、シェル連携を有効にする
+
+プロジェクトやcoding agentのworkflowで継続利用する前に、次のread-onlyな2コマンドで導入状態を確認します。
+
+```text
+$ stack doctor
+$ stack config path
+```
+
+`stack doctor`はCLI version、選択された設定パス、設定の状態、有効なicon storeのパス、導入済みの既知provider packを報告します。デフォルトの設定やicon storeが存在しない状態は正常です。明示したパスが不正または読み取れない場合は、修正方法を示してstatus `2`で終了します。`stack config path`は、設定を作成・読み込みせず、選択される`config.yaml`のパスを表示します。
+
+Homebrewはbinaryと一致する補完・manual fileを自動で導入します。直接ダウンロード、Aqua、Cargoでは、同じ決定的なfileを利用するshellに合わせて生成できます。
+
+```text
+$ stack completions bash
+$ stack completions zsh
+$ stack completions fish
+$ stack manpage
+```
+
+これらのコマンドは標準出力へ書き出すだけで、shellのstartup fileを変更しません。[シェル連携ガイド](https://github.com/stack-sh/cli/blob/main/docs/completions.md)に従い、利用者が所有する補完・manual用ディレクトリへ保存してください。インストールせずにoffline manualを読むこともできます。
+
+```text
+$ stack manpage > stack.1
+$ man ./stack.1
+```
+
 ## 最初のdocumentを書く
 
 ブラウザで試す場合は[Playground](https://stack-diagram.com/)を開き、エディタを次の作例に置き換えます。CLIの場合は同じソースを`diagram.stack`として保存し、上の検証・描画コマンドを実行できます。
@@ -212,4 +239,4 @@ Stack自身は更新を行いません。導入に使ったツールで管理し
 | Aqua | `aqua update`, `aqua update-checksum`, `aqua install` | この設定がある状態で`aqua rm -m pl stack-sh,stack-sh/cli`を実行し、`aqua.yaml`から`stack-sh/cli`を削除します。他のプロジェクトが必要とする場合は再インストールされます。 |
 | 直接ダウンロード | 新しいreleaseを検証し、直接導入したバイナリーだけを差し替えます。 | 自分で導入したバイナリー（`~/.local/bin/stack`）だけを削除します。 |
 
-補完・man page・復旧手順は[シェル連携](https://github.com/stack-sh/cli/blob/main/docs/completions.md)、[安全な更新](https://github.com/stack-sh/cli/blob/main/docs/self-update.md)、[配布物の検証](https://github.com/stack-sh/cli/blob/main/docs/supply-chain.md)を参照してください。
+更新時の復旧とartifactの検証は[安全な更新](https://github.com/stack-sh/cli/blob/main/docs/self-update.md)と[配布物の検証](https://github.com/stack-sh/cli/blob/main/docs/supply-chain.md)を参照してください。

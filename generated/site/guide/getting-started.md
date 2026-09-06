@@ -122,6 +122,33 @@ $ stack fmt diagram.stack
 $ stack fmt --check diagram.stack
 ```
 
+## Check your installation and add shell integration
+
+Before relying on Stack in a project or coding-agent workflow, inspect the installation with two read-only commands:
+
+```text
+$ stack doctor
+$ stack config path
+```
+
+`stack doctor` reports the CLI version, selected configuration path, configuration health, effective icon-store path, and installed known-provider packs. A missing default configuration or icon store is healthy; invalid or unreadable configured paths exit with status `2` and include a corrective action. `stack config path` prints the selected `config.yaml` path without creating or reading it.
+
+Homebrew installs the matching completion and manual files automatically. Direct, Aqua, and Cargo users can generate the same deterministic files for their shell:
+
+```text
+$ stack completions bash
+$ stack completions zsh
+$ stack completions fish
+$ stack manpage
+```
+
+These commands print to standard output and never edit shell startup files. Save the output in your shell's user-owned completion or manual directory by following the [shell integration guide](https://github.com/stack-sh/cli/blob/main/docs/completions.md). You can also read the offline manual without installing it:
+
+```text
+$ stack manpage > stack.1
+$ man ./stack.1
+```
+
 ## Write your first document
 
 For the browser path, open the [Playground](https://stack-diagram.com/) and replace its editor content with this example. CLI users can save the same source as `diagram.stack` and repeat the check/render commands above:
@@ -212,4 +239,4 @@ Stack does not update itself. Use the installer that owns your binary. Configura
 | Aqua | `aqua update`, `aqua update-checksum`, `aqua install` | Run `aqua rm -m pl stack-sh,stack-sh/cli` while this configuration is present, then remove `stack-sh/cli` from `aqua.yaml`. Other projects using this package may reinstall it when needed. |
 | Direct download | Verify a new release and replace only your directly installed binary. | Remove only the direct binary you installed (`~/.local/bin/stack`). |
 
-For shell completions, manual pages, and recovery, see [shell integration](https://github.com/stack-sh/cli/blob/main/docs/completions.md), [safe upgrades](https://github.com/stack-sh/cli/blob/main/docs/self-update.md), and [supply-chain verification](https://github.com/stack-sh/cli/blob/main/docs/supply-chain.md).
+For upgrade recovery and artifact verification, see [safe upgrades](https://github.com/stack-sh/cli/blob/main/docs/self-update.md) and [supply-chain verification](https://github.com/stack-sh/cli/blob/main/docs/supply-chain.md).
