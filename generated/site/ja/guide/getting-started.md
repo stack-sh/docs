@@ -4,7 +4,7 @@
 
 ## CLIを導入する
 
-Stack CLI 0.5.2はarm64 / x86_64のmacOSとglibc Linuxに対応します。配布バイナリーの要件はmacOS 13以降またはglibc 2.31以降です。WindowsとAlpine/muslは対象外です。`PATH`上で複数のバイナリーが競合しないよう、導入方法を1つ選んでください。正確な対応表は[配布契約](https://github.com/stack-sh/cli/blob/main/docs/distribution.md#supported-platform-matrix)が正本です。
+Stack CLI 0.5.3はarm64 / x86_64のmacOSとglibc Linuxに対応します。配布バイナリーの要件はmacOS 13以降またはglibc 2.31以降です。WindowsとAlpine/muslは対象外です。`PATH`上で複数のバイナリーが競合しないよう、導入方法を1つ選んでください。正確な対応表は[配布契約](https://github.com/stack-sh/cli/blob/main/docs/distribution.md#supported-platform-matrix)が正本です。
 
 ### Homebrew
 
@@ -19,7 +19,7 @@ brew install stack-sh/tap/stack
 Rust 1.85以降とネイティブリンカーが必要です。macOSではXcode Command Line Tools、LinuxではCコンパイラーとリンカーを用意し、Cargoのbinディレクトリを`PATH`へ追加してください。パッケージ名は`stack-diagram-cli`、コマンド名は`stack`です。
 
 ```text
-cargo install stack-diagram-cli --version 0.5.2 --locked
+cargo install stack-diagram-cli --version 0.5.3 --locked
 ```
 
 ### Aqua
@@ -40,7 +40,7 @@ registries:
     ref: 42702cda91a4156901b9a601bd143c43dcf05766
     path: aqua/registry.yaml
 packages:
-  - name: stack-sh/cli@v0.5.2
+  - name: stack-sh/cli@v0.5.3
     registry: stack-sh
 ```
 
@@ -75,7 +75,7 @@ aqua install
 ```text
 (
   set -eu
-  version=0.5.2
+  version=0.5.3
   case "$(uname -s)/$(uname -m)" in
     Darwin/arm64) target=aarch64-apple-darwin ;;
     Darwin/x86_64) target=x86_64-apple-darwin ;;
@@ -113,7 +113,7 @@ $ stack check diagram.stack
 $ stack render diagram.stack -o diagram.svg
 ```
 
-`stack 0.5.2`と表示され、`diagram.stack`が作成され、checkがエラーなく終了し、空でない`diagram.svg`ができれば成功です。SVGはブラウザーで開いたりREADMEに貼ったりできます。`stack init`は既存ファイルを保護するため、上書きせず新しいディレクトリを使ってください。
+`stack 0.5.3`と表示され、`diagram.stack`が作成され、checkがエラーなく終了し、空でない`diagram.svg`ができれば成功です。SVGはブラウザーで開いたりREADMEに貼ったりできます。`stack init`は既存ファイルを保護するため、上書きせず新しいディレクトリを使ってください。
 
 `diagram.stack`を自分の構成に書き換え、checkとrenderを繰り返します。整形が必要な場合は次を実行します。
 
