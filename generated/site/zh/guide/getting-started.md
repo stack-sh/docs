@@ -4,7 +4,7 @@
 
 ## 安装CLI
 
-Stack CLI 0.5.1支持arm64 / x86_64的macOS和glibc Linux。预编译文件需要macOS 13或glibc 2.31及以上；不支持Windows和Alpine/musl。请选择一种安装方式，避免多个二进制文件在`PATH`中冲突。准确的支持范围以[分发契约](https://github.com/stack-sh/cli/blob/main/docs/distribution.md#supported-platform-matrix)为准。
+Stack CLI 0.5.2支持arm64 / x86_64的macOS和glibc Linux。预编译文件需要macOS 13或glibc 2.31及以上；不支持Windows和Alpine/musl。请选择一种安装方式，避免多个二进制文件在`PATH`中冲突。准确的支持范围以[分发契约](https://github.com/stack-sh/cli/blob/main/docs/distribution.md#supported-platform-matrix)为准。
 
 ### Homebrew
 
@@ -19,7 +19,7 @@ brew install stack-sh/tap/stack
 需要Rust 1.85及以上和本地链接器：macOS使用Xcode Command Line Tools，Linux使用C编译器和链接器。将Cargo的bin目录加入`PATH`。包名为`stack-diagram-cli`，安装后的命令为`stack`。
 
 ```text
-cargo install stack-diagram-cli --version 0.5.1 --locked
+cargo install stack-diagram-cli --version 0.5.2 --locked
 ```
 
 ### Aqua
@@ -40,7 +40,7 @@ registries:
     ref: 42702cda91a4156901b9a601bd143c43dcf05766
     path: aqua/registry.yaml
 packages:
-  - name: stack-sh/cli@v0.5.1
+  - name: stack-sh/cli@v0.5.2
     registry: stack-sh
 ```
 
@@ -75,7 +75,7 @@ aqua install
 ```text
 (
   set -eu
-  version=0.5.1
+  version=0.5.2
   case "$(uname -s)/$(uname -m)" in
     Darwin/arm64) target=aarch64-apple-darwin ;;
     Darwin/x86_64) target=x86_64-apple-darwin ;;
@@ -113,7 +113,7 @@ $ stack check diagram.stack
 $ stack render diagram.stack -o diagram.svg
 ```
 
-预期结果：显示`stack 0.5.1`、生成`diagram.stack`、检查无错误，并生成非空的`diagram.svg`。用浏览器打开SVG或将其加入README。`stack init`会保护已有文件，请使用新目录而非覆盖原有工作。
+预期结果：显示`stack 0.5.2`、生成`diagram.stack`、检查无错误，并生成非空的`diagram.svg`。用浏览器打开SVG或将其加入README。`stack init`会保护已有文件，请使用新目录而非覆盖原有工作。
 
 修改`diagram.stack`描述自己的系统，再次运行check和render。需要格式化时执行：
 

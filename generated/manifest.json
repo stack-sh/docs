@@ -2,21 +2,21 @@
   "schemaVersion": "1.0",
   "cli": {
     "repository": "stack-sh/cli",
-    "revision": "1d5f64cc699e42f9ce52ac537903e40c0eb91432",
-    "version": "0.5.1"
+    "revision": "f6220c5c24bc515574ea6f6dd6d55af00d35f89d",
+    "version": "0.5.2"
   },
   "files": [
     {
       "path": "skills/stack-diagrams/SKILL.md",
-      "sha256": "af399eb4277fa4563f5126cce04e9a4a38feea31880db97c1eb904539a06669c"
+      "sha256": "70fdcce8810091502b3567a838ca9eb145f3dd9c187d1c51edbc52dd17d0cd0c"
     },
     {
       "path": "guide/agent-workflow.md",
-      "sha256": "b92225a66840f094e02ee42f32131f075287044e2d2f0a73ad60335e906ccf86"
+      "sha256": "c1ce223c9df56e62555909fb58c82928b4a92ff1f157dd2cbc0c03c676bc58f6"
     },
     {
       "path": "site/examples/index.md",
-      "sha256": "39074c46d21db23757e0f2a7395f0b5fecd2123ac47e8bcf68bab93219b2f2da"
+      "sha256": "0843dc907ca300b208f3f1c96b6e1edd07915cbb6efcbe6a4fa5fe84f4e28f43"
     },
     {
       "path": "site/guide/coding-agents.md",
@@ -24,7 +24,7 @@
     },
     {
       "path": "site/guide/getting-started.md",
-      "sha256": "e673678a7fe76d608f290babaf073c57b98fd03fce166c732d86feb50e4c5d8f"
+      "sha256": "d6356f314f28389119ce31398662c95c8c7ef6ddac60f0bd054ea1f45de757a4"
     },
     {
       "path": "site/guide/playground.md",
@@ -44,7 +44,7 @@
     },
     {
       "path": "site/ja/examples/index.md",
-      "sha256": "f1320c67f8c902f69a8d095e0fdac4baa8ef204768b56f5ed3c0131a55709b73"
+      "sha256": "3a848161d07ff963e685ee25ff27279f7396e5edd7a334fd236da39d52d4bf69"
     },
     {
       "path": "site/ja/guide/coding-agents.md",
@@ -52,7 +52,7 @@
     },
     {
       "path": "site/ja/guide/getting-started.md",
-      "sha256": "729e59c32a554f6efa6559e6e57811fb494813e8bd68b3e919b90dac7e16bbd6"
+      "sha256": "aa4bca13cc178bbdb3fb15badfc2d207b79ee0c539acbed92c712120208fa737"
     },
     {
       "path": "site/ja/guide/playground.md",
@@ -100,7 +100,7 @@
     },
     {
       "path": "site/ko/examples/index.md",
-      "sha256": "25a64a9aa5087cf4cdddf968c2f812e0f58b3497c072c01e1b53380f568ba5cf"
+      "sha256": "f254fb8e71d0b5124e116f6a60370c54b029a9fd832ede3ccb3c1c25935c08f3"
     },
     {
       "path": "site/ko/guide/coding-agents.md",
@@ -108,7 +108,7 @@
     },
     {
       "path": "site/ko/guide/getting-started.md",
-      "sha256": "667080b1012bc67514abe3827d9ff166e7c50dfd0fc7ac3be36d2ef73b801540"
+      "sha256": "2b3ca8edbf2b8956dae8311283984bbedbf1efee4a60ff38eea74d390b0bd6bc"
     },
     {
       "path": "site/ko/guide/playground.md",
@@ -184,7 +184,7 @@
     },
     {
       "path": "site/zh/examples/index.md",
-      "sha256": "738b43483cbef305b120f351c5a76169c42d669456f2843fe836798a2fb13913"
+      "sha256": "13e829852b86eab56674ebcfde91b9d143a6c71d4b464e402a693cda7b4514dc"
     },
     {
       "path": "site/zh/guide/coding-agents.md",
@@ -192,7 +192,7 @@
     },
     {
       "path": "site/zh/guide/getting-started.md",
-      "sha256": "2347ab5ddc5196f30287726eac5294b07b81d2c9cf543335751dd62dcc8e1613"
+      "sha256": "7b6f7d7cdc8264d4633828a21fb1202c3870c9ef6c198c6e23b369214f2abc11"
     },
     {
       "path": "site/zh/guide/playground.md",
@@ -240,19 +240,19 @@
     },
     {
       "path": "site/guide/agent-workflow.md",
-      "sha256": "50e2396e950ae319dbfd26a3dbb06c3a1163cec3cbcb7dac8eb8ca01b618bfd8"
+      "sha256": "03ed896542fc628227013b7bf69cdc232f77f77a0d630c10f02f27d7b25cefe2"
     },
     {
       "path": "site/ja/guide/agent-workflow.md",
-      "sha256": "50e2396e950ae319dbfd26a3dbb06c3a1163cec3cbcb7dac8eb8ca01b618bfd8"
+      "sha256": "03ed896542fc628227013b7bf69cdc232f77f77a0d630c10f02f27d7b25cefe2"
     },
     {
       "path": "site/zh/guide/agent-workflow.md",
-      "sha256": "50e2396e950ae319dbfd26a3dbb06c3a1163cec3cbcb7dac8eb8ca01b618bfd8"
+      "sha256": "03ed896542fc628227013b7bf69cdc232f77f77a0d630c10f02f27d7b25cefe2"
     },
     {
       "path": "site/ko/guide/agent-workflow.md",
-      "sha256": "50e2396e950ae319dbfd26a3dbb06c3a1163cec3cbcb7dac8eb8ca01b618bfd8"
+      "sha256": "03ed896542fc628227013b7bf69cdc232f77f77a0d630c10f02f27d7b25cefe2"
     },
     {
       "path": "machine/v1.0.0/manifest.json",
