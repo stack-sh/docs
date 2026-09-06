@@ -36,7 +36,11 @@ diagram "Node example" {
 | `storage`  | Blob、对象、文件或归档存储              |
 | `external` | 架构控制边界之外的系统                  |
 
-Kind 是语义分类，不是厂商形状。托管 PostgreSQL 仍是 `database`，技术名称应写入 `detail`。
+可在下方比较每种 kind 的实际 fallback 渲染。切换主题可以查看对应视觉系统；选择卡片即可复制相应的 `kind` 语句。这些预览不是预生成截图，而是由与 Playground 相同的固定版本 Engine/WASM 在您的设备上渲染。
+
+<NodeKindCatalog locale="zh" />
+
+Kind 是语义分类，不是固定的厂商形状。托管 PostgreSQL 仍是 `database`，技术名称应写入 `detail`。每种 kind 的形状、配色和 fallback 图标由当前主题控制，因此自定义主题可以改变外观而不改变架构语义。
 
 ## 标签与详情
 

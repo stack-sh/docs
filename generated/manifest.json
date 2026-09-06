@@ -2,17 +2,17 @@
   "schemaVersion": "1.0",
   "cli": {
     "repository": "stack-sh/cli",
-    "revision": "f6220c5c24bc515574ea6f6dd6d55af00d35f89d",
-    "version": "0.5.2"
+    "revision": "d66ff06fc75337e7d4e966108e7793dddd6b1e53",
+    "version": "0.5.3"
   },
   "files": [
     {
       "path": "skills/stack-diagrams/SKILL.md",
-      "sha256": "70fdcce8810091502b3567a838ca9eb145f3dd9c187d1c51edbc52dd17d0cd0c"
+      "sha256": "0925d134745a0db9f57ccfff589585f461981b3cec2330880722d4c8803d2a31"
     },
     {
       "path": "guide/agent-workflow.md",
-      "sha256": "c1ce223c9df56e62555909fb58c82928b4a92ff1f157dd2cbc0c03c676bc58f6"
+      "sha256": "12ab60398e9700817de352a918490de96f16f7068c968204dae93ed5114cb1b5"
     },
     {
       "path": "site/examples/index.md",
@@ -24,7 +24,7 @@
     },
     {
       "path": "site/guide/getting-started.md",
-      "sha256": "807e0b5ea42ab7f281c9c9f6a672415a8e4425bd89188a4a28209b3ab4c708f3"
+      "sha256": "eb2682e1e2d5354e83c4d532efdbee7aa76fdca2545b3a3428e4b00a37d630a1"
     },
     {
       "path": "site/guide/playground.md",
@@ -52,7 +52,7 @@
     },
     {
       "path": "site/ja/guide/getting-started.md",
-      "sha256": "e5cb089c8e51a95ac5c5085cbd316de33190ae3f0ce6533d8f13ed551d54f53e"
+      "sha256": "43e3fb1fb0beb2b37cb5ab06d4f6b37c49634de26c1089aa791a3d621152ed71"
     },
     {
       "path": "site/ja/guide/playground.md",
@@ -80,7 +80,7 @@
     },
     {
       "path": "site/ja/language/nodes-and-groups.md",
-      "sha256": "e953db6f6cd06d4ee645e2a83583f2d0b2eec92ea09bc1390edcf994d52b514c"
+      "sha256": "a8d7612cc5f0927d017e7e8c4242d297b5ab1141ac13f677a04eba1bb2a78319"
     },
     {
       "path": "site/ja/language/syntax.md",
@@ -88,7 +88,7 @@
     },
     {
       "path": "site/ja/language/themes-and-icons.md",
-      "sha256": "a62ca441e0773d12140a518311b0fc79060f52d4450e29c6107c85ee45823613"
+      "sha256": "c3379a236f22a0e5f14e5e777095235c0f4f25c80512ab17ba360cfb0e610fcd"
     },
     {
       "path": "site/ja/reference/diagnostics-and-limits.md",
@@ -108,7 +108,7 @@
     },
     {
       "path": "site/ko/guide/getting-started.md",
-      "sha256": "999c53bd1dd88e1a17ea6a0b1df548e37a9e8325711c0b1f3c67431ea65de77c"
+      "sha256": "8cb9ac1ed8cdbf5fba99ecd9b85b046d5d109bf619ff2f3125e8d61156c0d442"
     },
     {
       "path": "site/ko/guide/playground.md",
@@ -136,7 +136,7 @@
     },
     {
       "path": "site/ko/language/nodes-and-groups.md",
-      "sha256": "bba8f1c8f9ac9897c6cf39f8bf21ce618335824d2d3c0b2bd3179765dbfcd7b3"
+      "sha256": "3004ef8291217765b8d7f4e9708ad2dfa8d6f6ad1972c4dba35a275ca371bfa5"
     },
     {
       "path": "site/ko/language/syntax.md",
@@ -144,7 +144,7 @@
     },
     {
       "path": "site/ko/language/themes-and-icons.md",
-      "sha256": "af84dc459db2cd9fa7b14552cb218874d8e7f418155fb6d876749b76b9cb3bc3"
+      "sha256": "bab922ec5167d57bc3d85680dba6724efed60a10bb3dc4edf9df92583b90cedd"
     },
     {
       "path": "site/ko/reference/diagnostics-and-limits.md",
@@ -164,7 +164,7 @@
     },
     {
       "path": "site/language/nodes-and-groups.md",
-      "sha256": "be3819622ac9c561ac4a5bb947c7025607ec2d5609a4e62a9e9d35805d3d416f"
+      "sha256": "143b6460010a66a3d7b7898ee40e7170bf49bc3b98a66832f8f6f293b1b18bb1"
     },
     {
       "path": "site/language/syntax.md",
@@ -172,7 +172,7 @@
     },
     {
       "path": "site/language/themes-and-icons.md",
-      "sha256": "4e2a59b62db144914fcd5b6f166524c9472d65a748432da339becad068c2ca7e"
+      "sha256": "adce66fa4273ed18216bd2632efb7e21256ae0a3c6c0c8a295bd4d374e9dc303"
     },
     {
       "path": "site/reference/diagnostics-and-limits.md",
@@ -192,7 +192,7 @@
     },
     {
       "path": "site/zh/guide/getting-started.md",
-      "sha256": "0b5162f8c023ead20434867d354fdc4aa7df268d93cad8fbf2d89bde9d65a673"
+      "sha256": "2d9edefa83fbaa04dbdb34d7641e36dc7ef09a846e38090cdead622b635735cd"
     },
     {
       "path": "site/zh/guide/playground.md",
@@ -220,7 +220,7 @@
     },
     {
       "path": "site/zh/language/nodes-and-groups.md",
-      "sha256": "48a1a9186b2f817be780a01015b6bcae0e3f0b47675546dc36d4c172b40bc3b9"
+      "sha256": "c6c98ac30b3b5f56c0f116ac087cf6c2d58a94ef644e493552c44c720054722c"
     },
     {
       "path": "site/zh/language/syntax.md",
@@ -228,7 +228,7 @@
     },
     {
       "path": "site/zh/language/themes-and-icons.md",
-      "sha256": "376293b52fac1992c763d970410a72093f26275b97109d17e478d0e7257c339e"
+      "sha256": "64ee932a93b4d6befc72d164be71d699f2a7258fcf37c311f09cf5fba1ed3419"
     },
     {
       "path": "site/zh/reference/diagnostics-and-limits.md",
@@ -240,19 +240,19 @@
     },
     {
       "path": "site/guide/agent-workflow.md",
-      "sha256": "03ed896542fc628227013b7bf69cdc232f77f77a0d630c10f02f27d7b25cefe2"
+      "sha256": "34ac441e89a44cead076e0fa7cce19cdbcd0dca40281834bb51de45e138a1468"
     },
     {
       "path": "site/ja/guide/agent-workflow.md",
-      "sha256": "03ed896542fc628227013b7bf69cdc232f77f77a0d630c10f02f27d7b25cefe2"
+      "sha256": "34ac441e89a44cead076e0fa7cce19cdbcd0dca40281834bb51de45e138a1468"
     },
     {
       "path": "site/zh/guide/agent-workflow.md",
-      "sha256": "03ed896542fc628227013b7bf69cdc232f77f77a0d630c10f02f27d7b25cefe2"
+      "sha256": "34ac441e89a44cead076e0fa7cce19cdbcd0dca40281834bb51de45e138a1468"
     },
     {
       "path": "site/ko/guide/agent-workflow.md",
-      "sha256": "03ed896542fc628227013b7bf69cdc232f77f77a0d630c10f02f27d7b25cefe2"
+      "sha256": "34ac441e89a44cead076e0fa7cce19cdbcd0dca40281834bb51de45e138a1468"
     },
     {
       "path": "machine/v1.0.0/manifest.json",
