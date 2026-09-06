@@ -122,6 +122,33 @@ $ stack fmt diagram.stack
 $ stack fmt --check diagram.stack
 ```
 
+## 检查安装并配置shell集成
+
+在项目或coding agent工作流中持续使用Stack之前，请先运行两个只读命令检查安装状态：
+
+```text
+$ stack doctor
+$ stack config path
+```
+
+`stack doctor`会报告CLI版本、选中的配置路径、配置状态、实际icon store路径和已安装的已知provider pack。默认配置或icon store不存在属于正常状态；显式配置的路径无效或不可读时，命令会提供修复建议并以状态码`2`退出。`stack config path`只显示将使用的`config.yaml`路径，不会创建或读取该文件。
+
+Homebrew会自动安装与binary匹配的补全和manual文件。使用直接下载、Aqua或Cargo时，可以为自己的shell生成相同且确定的文件：
+
+```text
+$ stack completions bash
+$ stack completions zsh
+$ stack completions fish
+$ stack manpage
+```
+
+这些命令只写入标准输出，不会修改shell启动文件。请按照[shell集成指南](https://github.com/stack-sh/cli/blob/main/docs/completions.md)，将输出保存到用户拥有的补全或manual目录。也可以无需安装，直接阅读offline manual：
+
+```text
+$ stack manpage > stack.1
+$ man ./stack.1
+```
+
 ## 编写第一份文档
 
 在浏览器中试用时，打开[Playground](https://stack-diagram.com/)，将编辑器内容替换为下面的示例。CLI用户可以将相同源文件保存为`diagram.stack`，然后再次执行上面的检查与渲染命令：
@@ -212,4 +239,4 @@ Stack不会自行更新。请使用安装该二进制文件的工具进行管理
 | Aqua | `aqua update`, `aqua update-checksum`, `aqua install` | 保留此配置时运行`aqua rm -m pl stack-sh,stack-sh/cli`，然后从`aqua.yaml`移除`stack-sh/cli`。其他项目需要此包时可能会重新安装。 |
 | 直接下载 | 验证新release后，仅替换直接安装的二进制文件。 | 仅删除自己直接安装的二进制文件（`~/.local/bin/stack`）。 |
 
-补全、man页面与恢复方法见[shell集成](https://github.com/stack-sh/cli/blob/main/docs/completions.md)、[安全更新](https://github.com/stack-sh/cli/blob/main/docs/self-update.md)和[供应链验证](https://github.com/stack-sh/cli/blob/main/docs/supply-chain.md)。
+更新恢复与artifact验证方法见[安全更新](https://github.com/stack-sh/cli/blob/main/docs/self-update.md)和[供应链验证](https://github.com/stack-sh/cli/blob/main/docs/supply-chain.md)。
