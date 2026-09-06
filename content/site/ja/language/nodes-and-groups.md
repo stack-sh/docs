@@ -36,7 +36,11 @@ diagram "Node example" {
 | `storage`  | Blob、object、file、archive storage               |
 | `external` | Architectureのcontrol boundary外のsystem          |
 
-Kindはvendor shapeではなくsemantic categoryです。Hosted PostgreSQLも`database`で、technology名は`detail`に書きます。
+各kindの実際のfallback renderを以下で比較できます。Themeを切り替えてvisual systemを確認し、cardを選択すると対応する`kind` statementをコピーできます。Previewは事前生成した画像ではなく、Playgroundと同じpin済みEngine / WASMが端末上で描画します。
+
+<NodeKindCatalog locale="ja" />
+
+Kindは固定のvendor shapeではなくsemantic categoryです。Hosted PostgreSQLも`database`で、technology名は`detail`に書きます。各kindのshape、palette、fallback iconはactive themeが所有するため、custom themeはarchitectureの意味を変えずに見た目を変更できます。
 
 ## Labelとdetail
 

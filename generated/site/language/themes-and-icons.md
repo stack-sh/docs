@@ -107,7 +107,7 @@ The free core catalog includes these provider-neutral explicit icons in `default
 | `email`         | Email delivery                    | Email delivery or inboxes          |
 | `ai`            | Artificial intelligence system    | AI models or inference services    |
 
-Switch the preview below between light and dark to inspect the actual output. The published `@stack-sh/engine@0.7.0` renders every image locally; the Documentation does not copy Theme SVG assets. Select a syntax row to copy it.
+Switch the preview below between light and dark to inspect the actual output. The Documentation's pinned Engine/WASM package renders every image locally and reports its version beside the gallery; the Documentation does not copy Theme SVG assets. Select a syntax row to copy it.
 
 <IconCatalog locale="en" />
 

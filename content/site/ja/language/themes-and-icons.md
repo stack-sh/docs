@@ -107,7 +107,7 @@ Free core catalogは、次のprovider-neutralな明示iconを`default`、`light`
 | `email`         | Email delivery                    | Email delivery / inbox           |
 | `ai`            | Artificial intelligence system    | AI model / inference service     |
 
-下のpreviewをlight / darkへ切り替えると、実際のoutputを比較できます。各imageは公開`@stack-sh/engine@0.7.0`がlocalでrenderし、DocumentationにTheme SVG assetを複製していません。Syntaxの行を選ぶとコピーできます。
+下のpreviewをlight / darkへ切り替えると、実際のoutputを比較できます。DocumentationがpinしたEngine / WASM packageが各imageをlocalでrenderし、gallery横にversionを表示します。DocumentationにTheme SVG assetは複製しません。Syntaxの行を選ぶとコピーできます。
 
 <IconCatalog locale="ja" />
 

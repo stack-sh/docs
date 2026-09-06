@@ -36,7 +36,11 @@ diagram "Node example" {
 | `storage`  | Blob, object, file, archive storage                  |
 | `external` | 아키텍처 제어 경계 밖의 시스템                       |
 
-Kind는 벤더별 모양이 아닌 의미 범주입니다. 호스팅된 PostgreSQL도 `database`이며 기술 이름은 `detail`에 작성합니다.
+아래에서 각 kind의 실제 fallback 렌더링을 비교할 수 있습니다. 테마를 전환해 비주얼 시스템을 확인하고 카드를 선택하면 해당 `kind` 문장을 복사할 수 있습니다. 미리보기는 사전 생성된 스크린샷이 아니라 Playground와 동일하게 고정된 Engine/WASM이 사용자의 기기에서 렌더링합니다.
+
+<NodeKindCatalog locale="ko" />
+
+Kind는 고정된 벤더 모양이 아닌 의미 범주입니다. 호스팅된 PostgreSQL도 `database`이며 기술 이름은 `detail`에 작성합니다. 각 kind의 모양, 팔레트, fallback 아이콘은 활성 테마가 관리하므로 사용자 정의 테마는 아키텍처 의미를 바꾸지 않고 표현만 바꿀 수 있습니다.
 
 ## 라벨과 상세
 

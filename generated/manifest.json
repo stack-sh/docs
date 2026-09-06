@@ -80,7 +80,7 @@
     },
     {
       "path": "site/ja/language/nodes-and-groups.md",
-      "sha256": "e953db6f6cd06d4ee645e2a83583f2d0b2eec92ea09bc1390edcf994d52b514c"
+      "sha256": "a8d7612cc5f0927d017e7e8c4242d297b5ab1141ac13f677a04eba1bb2a78319"
     },
     {
       "path": "site/ja/language/syntax.md",
@@ -88,7 +88,7 @@
     },
     {
       "path": "site/ja/language/themes-and-icons.md",
-      "sha256": "a62ca441e0773d12140a518311b0fc79060f52d4450e29c6107c85ee45823613"
+      "sha256": "c3379a236f22a0e5f14e5e777095235c0f4f25c80512ab17ba360cfb0e610fcd"
     },
     {
       "path": "site/ja/reference/diagnostics-and-limits.md",
@@ -136,7 +136,7 @@
     },
     {
       "path": "site/ko/language/nodes-and-groups.md",
-      "sha256": "bba8f1c8f9ac9897c6cf39f8bf21ce618335824d2d3c0b2bd3179765dbfcd7b3"
+      "sha256": "3004ef8291217765b8d7f4e9708ad2dfa8d6f6ad1972c4dba35a275ca371bfa5"
     },
     {
       "path": "site/ko/language/syntax.md",
@@ -144,7 +144,7 @@
     },
     {
       "path": "site/ko/language/themes-and-icons.md",
-      "sha256": "af84dc459db2cd9fa7b14552cb218874d8e7f418155fb6d876749b76b9cb3bc3"
+      "sha256": "bab922ec5167d57bc3d85680dba6724efed60a10bb3dc4edf9df92583b90cedd"
     },
     {
       "path": "site/ko/reference/diagnostics-and-limits.md",
@@ -164,7 +164,7 @@
     },
     {
       "path": "site/language/nodes-and-groups.md",
-      "sha256": "be3819622ac9c561ac4a5bb947c7025607ec2d5609a4e62a9e9d35805d3d416f"
+      "sha256": "143b6460010a66a3d7b7898ee40e7170bf49bc3b98a66832f8f6f293b1b18bb1"
     },
     {
       "path": "site/language/syntax.md",
@@ -172,7 +172,7 @@
     },
     {
       "path": "site/language/themes-and-icons.md",
-      "sha256": "4e2a59b62db144914fcd5b6f166524c9472d65a748432da339becad068c2ca7e"
+      "sha256": "adce66fa4273ed18216bd2632efb7e21256ae0a3c6c0c8a295bd4d374e9dc303"
     },
     {
       "path": "site/reference/diagnostics-and-limits.md",
@@ -220,7 +220,7 @@
     },
     {
       "path": "site/zh/language/nodes-and-groups.md",
-      "sha256": "48a1a9186b2f817be780a01015b6bcae0e3f0b47675546dc36d4c172b40bc3b9"
+      "sha256": "c6c98ac30b3b5f56c0f116ac087cf6c2d58a94ef644e493552c44c720054722c"
     },
     {
       "path": "site/zh/language/syntax.md",
@@ -228,7 +228,7 @@
     },
     {
       "path": "site/zh/language/themes-and-icons.md",
-      "sha256": "376293b52fac1992c763d970410a72093f26275b97109d17e478d0e7257c339e"
+      "sha256": "64ee932a93b4d6befc72d164be71d699f2a7258fcf37c311f09cf5fba1ed3419"
     },
     {
       "path": "site/zh/reference/diagnostics-and-limits.md",

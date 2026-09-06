@@ -36,7 +36,11 @@ Two nodes may share a visible label when they are distinct entities, though labe
 | `storage`  | Blob, object, file, or archival storage                      |
 | `external` | System outside the architecture's control boundary           |
 
-Kinds are semantic categories, not vendor shapes. A hosted PostgreSQL instance is still a `database`; name the technology in `detail`.
+Compare the actual fallback rendered for every kind below. Switch the theme to inspect its visual system, then select a card to copy the corresponding `kind` statement. These previews are rendered on your device by the same pinned Engine/WASM package as the Playground; they are not pre-generated screenshots.
+
+<NodeKindCatalog locale="en" />
+
+Kinds are semantic categories, not fixed vendor shapes. A hosted PostgreSQL instance is still a `database`; name the technology in `detail`. The active theme owns each kind's shape, palette, and fallback icon, so a custom theme can change the presentation without changing the architecture's meaning.
 
 ## Labels and details
 

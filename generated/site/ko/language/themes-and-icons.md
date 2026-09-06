@@ -107,7 +107,7 @@ diagram "Explicit icon" {
 | `email`         | Email delivery                    | 이메일 전송 또는 받은편지함      |
 | `ai`            | Artificial intelligence system    | AI 모델 또는 추론 서비스         |
 
-아래 미리보기를 라이트와 다크로 전환하여 실제 출력을 비교할 수 있습니다. 각 이미지는 공개된 `@stack-sh/engine@0.7.0`이 로컬에서 렌더링하며 문서에 Theme SVG 에셋을 복제하지 않습니다. 문법 행을 선택하면 복사됩니다.
+아래 미리보기를 라이트와 다크로 전환하여 실제 출력을 비교할 수 있습니다. 문서가 고정한 Engine/WASM package가 각 이미지를 로컬에서 렌더링하고 gallery 옆에 버전을 표시합니다. 문서에는 Theme SVG 에셋을 복제하지 않습니다. 문법 행을 선택하면 복사됩니다.
 
 <IconCatalog locale="ko" />
 
