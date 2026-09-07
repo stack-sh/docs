@@ -4,7 +4,7 @@ Choose one installer, then create your first SVG below. Prefer working in your t
 
 ## Install the CLI
 
-Stack CLI 0.5.3 supports macOS and glibc Linux on arm64 and x86_64. Prebuilt archives require macOS 13 or glibc 2.31 or newer; Windows and Alpine/musl are not supported. Choose one installer so different copies do not compete on `PATH`. The [distribution contract](https://github.com/stack-sh/cli/blob/main/docs/distribution.md#supported-platform-matrix) owns the exact support matrix.
+Stack CLI 0.5.4 supports macOS and glibc Linux on arm64 and x86_64. Prebuilt archives require macOS 13 or glibc 2.31 or newer; Windows and Alpine/musl are not supported. Choose one installer so different copies do not compete on `PATH`. The [distribution contract](https://github.com/stack-sh/cli/blob/main/docs/distribution.md#supported-platform-matrix) owns the exact support matrix.
 
 ### Homebrew
 
@@ -19,7 +19,7 @@ brew install stack-sh/tap/stack
 Use Rust 1.85 or newer with a native linker: Xcode Command Line Tools on macOS, or a C compiler/linker on Linux. Make sure Cargo’s bin directory is on `PATH`. The package is `stack-diagram-cli`; the installed command is `stack`.
 
 ```text
-cargo install stack-diagram-cli --version 0.5.3 --locked
+cargo install stack-diagram-cli --version 0.5.4 --locked
 ```
 
 ### Aqua
@@ -40,7 +40,7 @@ registries:
     ref: 42702cda91a4156901b9a601bd143c43dcf05766
     path: aqua/registry.yaml
 packages:
-  - name: stack-sh/cli@v0.5.3
+  - name: stack-sh/cli@v0.5.4
     registry: stack-sh
 ```
 
@@ -75,7 +75,7 @@ With the [GitHub CLI](https://cli.github.com/) installed and authenticated, run 
 ```text
 (
   set -eu
-  version=0.5.3
+  version=0.5.4
   case "$(uname -s)/$(uname -m)" in
     Darwin/arm64) target=aarch64-apple-darwin ;;
     Darwin/x86_64) target=x86_64-apple-darwin ;;
@@ -113,7 +113,7 @@ $ stack check diagram.stack
 $ stack render diagram.stack -o diagram.svg
 ```
 
-Expected: `stack 0.5.3`, a new `diagram.stack`, no check errors, and a non-empty `diagram.svg`. Open the SVG in a browser or add it to your README. `stack init` protects existing files; use a fresh directory instead of overwriting your work.
+Expected: `stack 0.5.4`, a new `diagram.stack`, no check errors, and a non-empty `diagram.svg`. Open the SVG in a browser or add it to your README. `stack init` protects existing files; use a fresh directory instead of overwriting your work.
 
 Edit `diagram.stack` to describe your system, then repeat check and render. Format it when needed:
 

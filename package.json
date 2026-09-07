@@ -15,7 +15,7 @@
     "smoke": "node scripts/smoke-skill.mjs && node scripts/first-render.mjs"
   },
   "devDependencies": {
-    "@stack-sh/engine": "0.9.0",
+    "@stack-sh/engine": "0.9.1",
     "ajv": "8.20.0"
   }
 }
