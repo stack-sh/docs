@@ -6,4 +6,4 @@ Edit sources under `content/`, not files under `generated/`. Run `npm run genera
 
 Language syntax, schemas, and canonical examples belong to `stack-sh/specification`. CLI-specific contracts belong to `stack-sh/cli`. Link to those owners instead of creating competing contracts here.
 
-Preserve the public documentation URLs and the `npx skills add stack-sh/cli` installation entry point. Consumer updates must pin a merged provider commit and validate generated content before publication. Use topic branches and pull requests; never push implementation directly to main.
+Preserve the public documentation URLs and the `npx skills add stack-sh/cli` installation entry point. Consumer updates must pin a merged provider commit and validate generated content before publication. Use topic branches and pull requests; never push implementation directly to main. Write pull request titles and bodies in English, and follow `.github/pull_request_template.md` without removing or renaming its sections.
